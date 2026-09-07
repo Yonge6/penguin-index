@@ -35,11 +35,19 @@ final result: passed
 - Usage chart rendered, time range changed from 12 to 4 complete weeks, data totals and coverage updated.
 - English and Chinese mobile homepage captures, mobile open-source table overflow contained.
 - Source methodology expands through the footer link.
-- Console inspected: no application errors observed. Third-party Chrome extension warnings were excluded from application findings.
+- Console inspected: an earlier Vite dependency refresh logged an invalid-hook error during hot reload; a full reload resolved it. Final local render and the deployed production origin show no application errors. Third-party Chrome extension warnings were excluded from application findings.
 - Automated checks: six meaningful data/i18n tests pass; production build passes.
 
 ## Follow-up polish / test limits
 
 P3: generated crescent curvature differs from the mock, as does small letter-spacing detail in the wordmark. Footer is intentionally an expandable, accurate source disclosure rather than the mock's unverified metadata.
 
-Chart legend drag/pointer behavior and CSV download were implemented with ECharts/native download APIs but not exhaustively exercised across browsers. Mobile checks use browser viewport emulation, not a physical device. Data is bundled snapshots, not a live refresh service.
+Pricing CSV was downloaded in Chrome and its two filtered DeepSeek rows and currency were checked. Chart legend drag/pointer behavior is implemented with ECharts but was not exhaustively exercised across browsers. Mobile checks use browser viewport emulation, not a physical device. Data is bundled snapshots, not a live refresh service.
+
+## Public acceptance
+
+- Live: https://yonge6.github.io/penguin-index/
+- Deployment run 34112921077, attempt 2: success. Initial attempt hit the newly created environment’s main-branch default; the actual source branch was added to the allowed deployment branches.
+- Public home, assets and JSON returned HTTP 200; model and status snapshot SHA-256 hashes matched local files.
+- Public English/Chinese switch, Products/Skills/DSH tables, Usage canvas (24 model rows), Pricing refresh (193 rows) passed. No production-origin console errors.
+- Public screenshot: qa/live-zh-desktop.png.
