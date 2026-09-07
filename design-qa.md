@@ -51,3 +51,18 @@ Pricing CSV was downloaded in Chrome and its two filtered DeepSeek rows and curr
 - Public home, assets and JSON returned HTTP 200; model and status snapshot SHA-256 hashes matched local files.
 - Public English/Chinese switch, Products/Skills/DSH tables, Usage canvas (24 model rows), Pricing refresh (193 rows) passed. No production-origin console errors.
 - Public screenshot: qa/live-zh-desktop.png.
+
+
+## 2026-09-08 — Content-first homepage revision
+
+final result: passed (homepage visual and scoped interaction QA only; functional parity is not passed)
+
+User feedback supersedes the former directory layout: show browsable rankings on Home. Kept the publisher, penguin mark, bilingual navigation, editorial typography and black/white/acid palette. Replaced directory tiles with open-source Top 10, model-use and price summaries, plus a four-week trend chart. Shrunk the hero to bring content forward.
+
+Compared the selected reference and new desktop capture together. The structural deviation is explicitly requested; no unresolved P0/P1/P2 layout issue within this homepage change. Initial mobile table required sideways scrolling for metrics; replaced it with stacked rows showing descriptions, growth and total stars. Current English and Chinese 390px layouts have document scrollWidth equal to viewport width. Browser viewport override restored.
+
+Current-run evidence in qa/functional-audit-2026-09-08/: 10-home-content-local.png (English), 11-home-mobile-zh.png, 12-home-mobile-prices.png, 13-home-mobile-en.png, 14-home-desktop-zh.png, 15-home-chart.png. All accepted screenshots opened and visually inspected. Initial loading capture was replaced; 08-new-usage.png captured before chart load and is rejected as visual chart evidence.
+
+Scoped interactions: Skills weekly, DSH monthly baseline state, bilingual state preservation, search, save/unsave, saved-only filter, project dialog, CNY pricing dialog, independent model summaries during project filtering, phone anchor navigation, rendered chart tooltip. Existing automated data tests and production build pass. Physical-device and exhaustive assistive-technology testing remain outside this check.
+
+See functional-audit.md for original-site omissions. Prior visual acceptance was not a full parity audit.

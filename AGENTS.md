@@ -7,3 +7,7 @@ Before making substantial visual changes, use the Product Design plugin's `get-c
 When implementing from a selected generated mock, treat that image as the source of truth for layout, component anatomy, density, spacing, color, typography, visible content, and hierarchy.
 
 Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts/prepare-sites-build.mjs`, and `tests/sites-worker.test.mjs` intact so the same local prototype can be handed to Sites. Before a Sites handoff, run `npm run build` and `npm run test:sites`; the build must leave `dist/client/index.html`, `dist/server/index.js`, and `dist/.openai/hosting.json`.
+
+## Confirmed product direction (2026-09-08)
+
+The home page must expose actual ranking content for browsing, like the original ranking site; it must not be only a directory of navigation tiles. Preserve the selected black/white/acid-yellow design, bilingual controls and footer metadata. Home should include browsable open-source rankings plus model-usage and pricing summaries. Functional parity with the original site is a separate acceptance criterion from visual QA; explicitly report remaining omissions.
