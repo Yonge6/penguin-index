@@ -66,3 +66,10 @@ Current-run evidence in qa/functional-audit-2026-09-08/: 10-home-content-local.p
 Scoped interactions: Skills weekly, DSH monthly baseline state, bilingual state preservation, search, save/unsave, saved-only filter, project dialog, CNY pricing dialog, independent model summaries during project filtering, phone anchor navigation, rendered chart tooltip. Existing automated data tests and production build pass. Physical-device and exhaustive assistive-technology testing remain outside this check.
 
 See functional-audit.md for original-site omissions. Prior visual acceptance was not a full parity audit.
+
+### Public acceptance of the homepage revision
+
+- Deployed commit b2416ae through successful GitHub Pages run 34147653807.
+- Public HTML, JS, CSS, project JSON, model JSON and penguin mark return HTTP 200; fetched asset/data SHA-256 hashes match the local build.
+- Actual public browser renders 10 project rows, 5 usage entries, 5 price entries and one chart canvas. Skills weekly remains selected when switching to English. Standalone Open Source still renders 10 rows. Restored the public preview to Chinese Home / Products / Daily.
+- Current public screenshot: qa/functional-audit-2026-09-08/16-home-live.png, saved and inspected.
