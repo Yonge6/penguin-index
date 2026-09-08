@@ -11,3 +11,17 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 ## Confirmed product direction (2026-09-08)
 
 The home page must expose actual ranking content for browsing, like the original ranking site; it must not be only a directory of navigation tiles. Preserve the selected black/white/acid-yellow design, bilingual controls and footer metadata. Home should include browsable open-source rankings plus model-usage and pricing summaries. Functional parity with the original site is a separate acceptance criterion from visual QA; explicitly report remaining omissions.
+
+## Latest design correction (2026-09-08)
+
+The user rejected the warm grey-green paper texture, heavy title and traditional dashboard feel as old-fashioned. Redesign toward a contemporary international technology/developer publication on a clean pale background. A fresh generated visual direction must guide the next implementation; the warm-paper draft has not been published. Preserve all functional additions already in progress: full price detail, original usage modes/date ranges and model selection, model logos and available project logos. Remove the home-jumps shortcut row as explicitly annotated. Original functional reference remains https://kejunzheng.github.io/penguin-ranking-preview/.
+
+The user explicitly requires navigation to remain fixed at the top while scrolling on desktop and mobile. All redesigned directions must preserve this; compensate content and anchor offsets to avoid overlap.
+
+## Selected visual target and refinement
+
+The user selected the attached Signal Studio image (design-options/2026-09-08/signal-studio.png), then explicitly requested a very pale background plus refined white cards. Keep the single compact fixed top navigation, purple/blue/cyan chart colors, lavender glass hero, readable dark typography, 12px card corners, fine borders and light shadows. Use the generated lavender-glass.webp as the hero artwork. Preserve original functional behavior and precise bundled snapshot calculations; do not copy invented page-date labels, market-wide coverage claims, or distorted bar geometry from generated images.
+
+The user also requires consistent horizontal spacing: align the fixed header, hero copy, ranking cards and footer to one shared content edge. Desktop gutter 48px (centered max-width 1440px), tablet 32px, mobile 20px. Hero artwork may bleed to the viewport edge, but its text must not.
+
+Default both the usage data explanation and footer ranking methodology to expanded; users may still collapse them.

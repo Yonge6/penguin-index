@@ -1,0 +1,364 @@
+{
+  "source": "https://h5.news.qq.com/qqfile/openrouterllm/model-trends.html",
+  "providers": {
+    "deepseek": {
+      "websiteUrl": "https://platform.deepseek.com/",
+      "platforms": [
+        {
+          "name": "官方 API",
+          "nameEn": "Official API",
+          "url": "https://platform.deepseek.com/",
+          "type": "official"
+        },
+        {
+          "name": "硅基流动",
+          "nameEn": "SiliconFlow",
+          "url": "https://cloud.siliconflow.cn/",
+          "type": "third_party"
+        },
+        {
+          "name": "腾讯云",
+          "nameEn": "Tencent Cloud",
+          "url": "https://cloud.tencent.com/product/tcadp",
+          "type": "third_party"
+        },
+        {
+          "name": "阿里云百炼",
+          "nameEn": "Alibaba Bailian",
+          "url": "https://bailian.console.aliyun.com/",
+          "type": "third_party"
+        }
+      ]
+    },
+    "zhipu": {
+      "websiteUrl": "https://open.bigmodel.cn/",
+      "platforms": [
+        {
+          "name": "智谱开放平台",
+          "nameEn": "Zhipu Open",
+          "url": "https://open.bigmodel.cn/",
+          "type": "official"
+        },
+        {
+          "name": "硅基流动",
+          "nameEn": "SiliconFlow",
+          "url": "https://cloud.siliconflow.cn/",
+          "type": "third_party"
+        }
+      ]
+    },
+    "qwen": {
+      "websiteUrl": "https://bailian.console.aliyun.com/",
+      "platforms": [
+        {
+          "name": "阿里云百炼",
+          "nameEn": "Alibaba Bailian",
+          "url": "https://bailian.console.aliyun.com/",
+          "type": "official"
+        },
+        {
+          "name": "硅基流动",
+          "nameEn": "SiliconFlow",
+          "url": "https://cloud.siliconflow.cn/",
+          "type": "third_party"
+        }
+      ]
+    },
+    "moonshot": {
+      "websiteUrl": "https://platform.moonshot.cn/",
+      "platforms": [
+        {
+          "name": "官方 API",
+          "nameEn": "Official API",
+          "url": "https://platform.moonshot.cn/",
+          "type": "official"
+        }
+      ]
+    },
+    "minimax": {
+      "websiteUrl": "https://platform.minimaxi.com/",
+      "platforms": [
+        {
+          "name": "官方 API",
+          "nameEn": "Official API",
+          "url": "https://platform.minimaxi.com/",
+          "type": "official"
+        },
+        {
+          "name": "硅基流动",
+          "nameEn": "SiliconFlow",
+          "url": "https://cloud.siliconflow.cn/",
+          "type": "third_party"
+        }
+      ]
+    },
+    "doubao": {
+      "websiteUrl": "https://www.volcengine.com/product/ark",
+      "platforms": [
+        {
+          "name": "火山方舟",
+          "nameEn": "Volcengine Ark",
+          "url": "https://www.volcengine.com/product/ark",
+          "type": "official"
+        }
+      ]
+    },
+    "hunyuan": {
+      "websiteUrl": "https://cloud.tencent.com/product/hunyuan",
+      "platforms": [
+        {
+          "name": "腾讯云",
+          "nameEn": "Tencent Cloud",
+          "url": "https://cloud.tencent.com/product/hunyuan",
+          "type": "official"
+        }
+      ]
+    },
+    "ernie": {
+      "websiteUrl": "https://qianfan.cloud.baidu.com/",
+      "platforms": [
+        {
+          "name": "百度智能云千帆",
+          "nameEn": "Baidu Qianfan",
+          "url": "https://qianfan.cloud.baidu.com/",
+          "type": "official"
+        }
+      ]
+    },
+    "baichuan": {
+      "websiteUrl": "https://platform.baichuan-ai.com/",
+      "platforms": [
+        {
+          "name": "官方开放平台",
+          "nameEn": "Official Platform",
+          "url": "https://platform.baichuan-ai.com/",
+          "type": "official"
+        }
+      ]
+    },
+    "step": {
+      "websiteUrl": "https://platform.stepfun.com/",
+      "platforms": [
+        {
+          "name": "阶跃星辰开放平台",
+          "nameEn": "StepFun Platform",
+          "url": "https://platform.stepfun.com/",
+          "type": "official"
+        }
+      ]
+    },
+    "yi": {
+      "websiteUrl": "https://platform.lingyiwanwu.com/",
+      "platforms": [
+        {
+          "name": "零一万物开放平台",
+          "nameEn": "01.AI Platform",
+          "url": "https://platform.lingyiwanwu.com/",
+          "type": "official"
+        }
+      ]
+    }
+  },
+  "releaseDates": {
+    "deepseek-v4-pro": "2026-04-24",
+    "deepseek-v4-flash": "2026-04-24",
+    "deepseek-chat": "2026-04-24",
+    "deepseek-reasoner": "2026-04-24",
+    "glm-5.2": "2026-06-17",
+    "glm-5.1": "2026-05-12",
+    "glm-5-turbo": "2026-05-12",
+    "glm-5": "2026-04-08",
+    "glm-5v-turbo": "2026-04-08",
+    "glm-4.7": "2026-02-18",
+    "glm-4.7-flash": "2026-02-18",
+    "glm-4.7-flashx": "2026-02-18",
+    "glm-4.5-air": "2026-02-18",
+    "glm-4.5v": "2026-03-15",
+    "glm-4.6v": "2026-04-10",
+    "glm-4.6v-flash": "2026-04-10",
+    "glm-4.6v-flashx": "2026-04-10",
+    "glm-4-plus": "2025-08-20",
+    "glm-4-air": "2024-06-05",
+    "glm-4-long": "2024-08-14",
+    "glm-4-flashx-250414": "2025-04-14",
+    "glm-4v-plus-0111": "2025-01-11",
+    "qwen3.7-max": "2026-05-20",
+    "qwen3.7-max-preview": "2026-05-17",
+    "qwen3.7-plus": "2026-05-26",
+    "qwen3.6-max-preview": "2026-05-20",
+    "qwen3.6-plus": "2026-05-20",
+    "qwen3.6-flash": "2026-05-20",
+    "qwen3.6-35b-a3b": "2026-05-20",
+    "qwen3.5-plus": "2026-04-05",
+    "qwen3.5-flash": "2026-04-05",
+    "qwen3.5-27b": "2026-04-05",
+    "qwen3.5-35b-a3b": "2026-04-05",
+    "qwen3.5-122b-a10b": "2026-04-05",
+    "qwen3.5-397b-a17b": "2026-04-05",
+    "qwen3-max": "2026-03-15",
+    "qwen3-max-preview": "2025-09-05",
+    "qwen3-coder-plus": "2026-04-10",
+    "qwen3-coder-next": "2026-04-10",
+    "qwen3-coder-flash": "2026-04-10",
+    "qwen3-coder-30b-a3b-instruct": "2025-07-22",
+    "qwen3-coder-480b-a35b-instruct": "2025-07-22",
+    "qwen3-next-80b-a3b-instruct": "2025-09-12",
+    "qwen3-next-80b-a3b-thinking": "2025-09-12",
+    "qwen3-235b-a22b": "2025-04-29",
+    "qwen3-235b-a22b-instruct-2507": "2025-07-20",
+    "qwen3-235b-a22b-thinking-2507": "2025-07-20",
+    "qwen3-30b-a3b": "2025-04-29",
+    "qwen3-30b-a3b-instruct-2507": "2025-07-22",
+    "qwen3-30b-a3b-thinking-2507": "2025-07-22",
+    "qwen3-32b": "2025-04-29",
+    "qwen3-14b": "2025-04-29",
+    "qwen3-8b": "2025-04-29",
+    "qwen3-4b": "2025-04-29",
+    "qwen3-1.7b": "2025-04-29",
+    "qwen3-0.6b": "2025-04-29",
+    "qwen3-vl-plus": "2025-10-15",
+    "qwen3-vl-flash": "2025-10-15",
+    "qwen3-vl-235b-a22b-instruct": "2025-10-15",
+    "qwen3-vl-235b-a22b-thinking": "2025-10-15",
+    "qwen3-vl-32b-instruct": "2025-10-15",
+    "qwen3-vl-32b-thinking": "2025-10-15",
+    "qwen3-vl-30b-a3b-instruct": "2025-10-15",
+    "qwen3-vl-30b-a3b-thinking": "2025-10-15",
+    "qwen3-vl-8b-instruct": "2025-10-15",
+    "qwen3-vl-8b-thinking": "2025-10-15",
+    "qwen-plus": "2025-11-01",
+    "qwen-flash": "2025-11-01",
+    "qwen-turbo": "2024-06-06",
+    "qwen-long": "2024-06-06",
+    "qwen-max": "2024-09-19",
+    "qwen-vl-max": "2025-01-08",
+    "qwen-vl-plus": "2024-08-09",
+    "qwen-vl-ocr": "2024-12-30",
+    "qwq-plus": "2025-03-06",
+    "qwq-32b": "2025-03-06",
+    "qwq-32b-preview": "2024-11-28",
+    "qvq-72b-preview": "2024-12-24",
+    "qwen-deep-research": "2025-06-26",
+    "qwen-coder-plus": "2024-11-12",
+    "qwen-coder-turbo": "2024-11-12",
+    "qwen-math-plus": "2024-08-09",
+    "qwen-math-turbo": "2024-08-09",
+    "qwen-mt-plus": "2025-05-13",
+    "qwen-mt-turbo": "2025-05-13",
+    "qwen-mt-flash": "2025-05-13",
+    "qwen-mt-lite": "2025-05-13",
+    "qwen-doc-turbo": "2024-12-04",
+    "qwen2.5-72b-instruct": "2024-09-19",
+    "qwen2.5-32b-instruct": "2024-09-19",
+    "qwen2.5-14b-instruct": "2024-09-19",
+    "qwen2.5-7b-instruct": "2024-09-19",
+    "qwen2.5-3b-instruct": "2024-09-19",
+    "qwen2.5-14b-instruct-1m": "2025-01-26",
+    "qwen2.5-7b-instruct-1m": "2025-01-26",
+    "qwen2.5-coder-32b-instruct": "2024-11-12",
+    "qwen2.5-coder-14b-instruct": "2024-11-12",
+    "qwen2.5-coder-7b-instruct": "2024-11-12",
+    "qwen2.5-math-72b-instruct": "2024-09-19",
+    "qwen2.5-math-7b-instruct": "2024-09-19",
+    "qwen2.5-vl-72b-instruct": "2025-01-27",
+    "qwen2.5-vl-32b-instruct": "2025-03-24",
+    "qwen2.5-vl-7b-instruct": "2025-01-27",
+    "qwen2.5-vl-3b-instruct": "2025-01-27",
+    "kimi-k2.6": "2026-05-15",
+    "kimi-k2.5": "2026-03-20",
+    "kimi-k2-thinking": "2026-04-01",
+    "kimi-k2-thinking-turbo": "2026-04-01",
+    "kimi-k2-0905-preview": "2025-09-05",
+    "kimi-k2-0711-preview": "2025-07-11",
+    "kimi-k2-turbo-preview": "2025-10-15",
+    "moonshot-v1-8k": "2024-02-22",
+    "moonshot-v1-32k": "2024-02-22",
+    "moonshot-v1-128k": "2024-02-22",
+    "moonshot-v1-8k-vision-preview": "2025-01-13",
+    "moonshot-v1-32k-vision-preview": "2025-01-13",
+    "moonshot-v1-128k-vision-preview": "2025-01-13",
+    "minimax-m2.7": "2026-05-10",
+    "minimax-m2.7-highspeed": "2026-05-10",
+    "minimax-m2.5": "2026-03-25",
+    "minimax-m2.5-highspeed": "2026-03-25",
+    "minimax-m2.1": "2026-01-10",
+    "minimax-m2.1-highspeed": "2026-01-10",
+    "minimax-m2": "2025-11-15",
+    "minimax-m2-her": "2026-02-14",
+    "doubao-seed-2.0-pro": "2026-04-15",
+    "doubao-seed-2.0-lite": "2026-04-15",
+    "doubao-seed-2.0-mini": "2026-04-15",
+    "doubao-seed-2.0-code": "2026-04-15",
+    "doubao-seed-1.8": "2026-01-20",
+    "doubao-seed-1.6": "2025-10-15",
+    "doubao-seed-1.6-flash": "2025-10-15",
+    "doubao-seed-1.6-lite": "2025-10-15",
+    "doubao-seed-1.6-vision": "2025-10-15",
+    "doubao-seed-code": "2025-08-15",
+    "doubao-seed-character": "2025-06-10",
+    "doubao-seed-translation": "2025-06-10",
+    "doubao-1.5-pro-32k": "2025-01-22",
+    "doubao-1.5-lite-32k": "2025-01-22",
+    "doubao-1.5-vision-pro": "2025-03-10",
+    "hy-3": "2026-07-06",
+    "hy3-preview": "2026-05-25",
+    "hy-2.0-think": "2026-04-08",
+    "hy-2.0-instruct": "2026-04-08",
+    "hy-vision-1.5-instruct": "2026-03-12",
+    "hunyuan-t1": "2026-02-12",
+    "hunyuan-t1-vision": "2026-02-12",
+    "hunyuan-turbos": "2025-09-18",
+    "hunyuan-turbos-vision": "2025-09-18",
+    "hunyuan-turbos-vision-video": "2025-09-18",
+    "hunyuan-a13b": "2025-12-10",
+    "hunyuan-lite": "2024-05-21",
+    "hunyuan-large-role": "2024-11-05",
+    "hunyuan-translation": "2024-09-05",
+    "hunyuan-translation-lite": "2024-09-05",
+    "ernie-5.0": "2026-05-15",
+    "ernie-x1.1": "2026-04-25",
+    "ernie-x1-turbo": "2026-03-16",
+    "ernie-4.5-turbo-128k": "2026-01-08",
+    "ernie-4.5-turbo-32k": "2026-01-08",
+    "ernie-4.5-turbo-vl": "2026-01-08",
+    "ernie-4.5-8k": "2025-06-15",
+    "ernie-4.5-0.3b": "2025-06-15",
+    "ernie-4.5-21b-a3b": "2025-06-15",
+    "ernie-4.5-21b-a3b-thinking": "2025-09-10",
+    "ernie-4.5-vl-28b-a3b": "2025-06-15",
+    "ernie-speed-pro-128k": "2025-08-20",
+    "ernie-lite-pro-128k": "2025-08-20",
+    "ernie-char-8k": "2024-08-30",
+    "ernie-char-fiction-8k": "2024-08-30",
+    "baichuan-m3-plus": "2026-04-12",
+    "baichuan-m3": "2026-02-20",
+    "baichuan-m2-plus": "2025-12-05",
+    "baichuan-m2": "2025-10-15",
+    "baichuan4-turbo": "2024-09-05",
+    "baichuan4-air": "2024-09-05",
+    "baichuan4": "2024-05-22",
+    "baichuan3-turbo": "2024-04-11",
+    "baichuan3-turbo-128k": "2024-04-11",
+    "baichuan2-turbo": "2023-12-19",
+    "baichuan2-53b": "2023-08-08",
+    "step-3": "2026-03-25",
+    "step-3.5-flash": "2026-05-05",
+    "step-2-mini": "2025-08-12",
+    "step-2-16k": "2025-04-15",
+    "step-2-16k-exp": "2025-04-15",
+    "step-1o-turbo-vision": "2026-02-08",
+    "step-1o-vision-32k": "2025-09-20",
+    "step-1o-audio": "2025-09-20",
+    "step-r1-v-mini": "2025-05-08",
+    "step-1-8k": "2024-09-26",
+    "step-1-32k": "2024-09-26",
+    "step-1-256k": "2024-09-26",
+    "step-1v-8k": "2024-09-26",
+    "step-1v-32k": "2024-09-26",
+    "step-audio-2": "2025-07-15",
+    "yi-lightning": "2024-10-16",
+    "yi-large": "2024-05-13",
+    "yi-medium": "2024-05-13",
+    "yi-vision-v2": "2024-11-12"
+  }
+}

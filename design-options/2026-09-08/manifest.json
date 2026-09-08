@@ -1,0 +1,21 @@
+{
+  "displayOrder": [
+    {
+      "option": 1,
+      "file": "electric-editorial.png",
+      "chat": "https://chatgpt.com/c/6a9f7a8c-88e4-83e9-a98b-996bbfe0a4a8"
+    },
+    {
+      "option": 2,
+      "file": "signal-studio.png",
+      "chat": "https://chatgpt.com/c/6a9f7ab9-0320-83e9-ad84-7c633f7026a0"
+    },
+    {
+      "option": 3,
+      "file": "index-culture.png",
+      "chat": "https://chatgpt.com/c/6a9f7b02-88e4-83e9-b775-a6b45e4cdfe7"
+    }
+  ],
+  "status": "awaiting visual selection",
+  "requirement": "Fixed top navigation on desktop and mobile"
+}

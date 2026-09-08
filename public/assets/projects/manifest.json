@@ -1,0 +1,266 @@
+{
+  "AgentOps-AI/agentops": {
+    "file": "assets/projects/agentops-ai--agentops.webp",
+    "label": "AgentOps-AI",
+    "kind": "owner-avatar",
+    "source": "https://avatars.githubusercontent.com/u/140554352?v=4&s=128"
+  },
+  "ComposioHQ/composio": {
+    "file": "assets/projects/composiohq--composio.svg",
+    "label": "composio",
+    "kind": "project-logo",
+    "source": "https://brand.composio.dev/logos/Logomark-Black.svg"
+  },
+  "DietrichGebert/ponytail": {
+    "file": "assets/projects/dietrichgebert--ponytail.webp",
+    "label": "ponytail",
+    "kind": "project-logo",
+    "source": "https://raw.githubusercontent.com/DietrichGebert/ponytail/main/assets/logo.png"
+  },
+  "Graphify-Labs/graphify": {
+    "file": "assets/projects/graphify-labs--graphify.webp",
+    "label": "graphify",
+    "kind": "project-logo",
+    "source": "https://raw.githubusercontent.com/Graphify-Labs/graphify/v8/docs/logo.png"
+  },
+  "NousResearch/hermes-agent": {
+    "file": "assets/projects/nousresearch--hermes-agent.webp",
+    "label": "NousResearch",
+    "kind": "owner-avatar",
+    "source": "https://avatars.githubusercontent.com/u/134168893?v=4&s=128"
+  },
+  "OpenHands/OpenHands": {
+    "file": "assets/projects/openhands--openhands.webp",
+    "label": "OpenHands",
+    "kind": "owner-avatar",
+    "source": "https://avatars.githubusercontent.com/u/225919603?v=4&s=128"
+  },
+  "TransformerOptimus/SuperAGI": {
+    "file": "assets/projects/transformeroptimus--superagi.webp",
+    "label": "TransformerOptimus",
+    "kind": "owner-avatar",
+    "source": "https://avatars.githubusercontent.com/u/133493246?v=4&s=128"
+  },
+  "affaan-m/ECC": {
+    "file": "assets/projects/affaan-m--ecc.svg",
+    "label": "ECC",
+    "kind": "project-logo",
+    "source": "https://raw.githubusercontent.com/affaan-m/ECC/main/assets/ecc-icon.svg"
+  },
+  "amruthpillai/reactive-resume": {
+    "file": "assets/projects/amruthpillai--reactive-resume.svg",
+    "label": "reactive-resume",
+    "kind": "project-logo",
+    "source": "https://raw.githubusercontent.com/amruthpillai/reactive-resume/main/apps/web/public/favicon.svg"
+  },
+  "anthropics/skills": {
+    "file": "assets/projects/anthropics--skills.webp",
+    "label": "anthropics",
+    "kind": "owner-avatar",
+    "source": "https://avatars.githubusercontent.com/u/76263028?v=4&s=128"
+  },
+  "anywhere-labs/dsh-desktop": {
+    "file": "assets/projects/anywhere-labs--dsh-desktop.webp",
+    "label": "dsh-desktop",
+    "kind": "project-logo",
+    "source": "https://raw.githubusercontent.com/anywhere-labs/dsh-desktop/master/dsh-plugin-desktop/build/app-icon.png"
+  },
+  "appsmithorg/appsmith": {
+    "file": "assets/projects/appsmithorg--appsmith.webp",
+    "label": "appsmithorg",
+    "kind": "owner-avatar",
+    "source": "https://avatars.githubusercontent.com/u/67620218?v=4&s=128"
+  },
+  "awesome-selfhosted/awesome-selfhosted": {
+    "file": "assets/projects/awesome-selfhosted--awesome-selfhosted.webp",
+    "label": "awesome-selfhosted",
+    "kind": "owner-avatar",
+    "source": "https://avatars.githubusercontent.com/u/24270415?v=4&s=128"
+  },
+  "browser-use/browser-use": {
+    "file": "assets/projects/browser-use--browser-use.webp",
+    "label": "browser-use",
+    "kind": "owner-avatar",
+    "source": "https://avatars.githubusercontent.com/u/192012301?v=4&s=128"
+  },
+  "calcom/cal.diy": {
+    "file": "assets/projects/calcom--cal.diy.webp",
+    "label": "calcom",
+    "kind": "owner-avatar",
+    "source": "https://avatars.githubusercontent.com/u/79145102?v=4&s=128"
+  },
+  "crewAIInc/crewAI": {
+    "file": "assets/projects/crewaiinc--crewai.webp",
+    "label": "crewAIInc",
+    "kind": "owner-avatar",
+    "source": "https://avatars.githubusercontent.com/u/170677839?v=4&s=128"
+  },
+  "dataelement/dsh-desktop": {
+    "file": "assets/projects/dataelement--dsh-desktop.webp",
+    "label": "dsh-desktop",
+    "kind": "project-logo",
+    "source": "https://raw.githubusercontent.com/dataelement/dsh-desktop/main/docs/images/readme-logo-black-v020.png"
+  },
+  "deepseek-ai/deepseek-harness": {
+    "file": "assets/projects/deepseek-ai--deepseek-harness.webp",
+    "label": "deepseek-ai",
+    "kind": "owner-avatar",
+    "source": "https://avatars.githubusercontent.com/u/148330874?v=4&s=128"
+  },
+  "farion1231/cc-switch": {
+    "file": "assets/projects/farion1231--cc-switch.webp",
+    "label": "cc-switch",
+    "kind": "project-logo",
+    "source": "https://raw.githubusercontent.com/farion1231/cc-switch/main/src-tauri/icons/icon.png"
+  },
+  "freestylefly/awesome-gpt-image-2": {
+    "file": "assets/projects/freestylefly--awesome-gpt-image-2.webp",
+    "label": "freestylefly",
+    "kind": "owner-avatar",
+    "source": "https://avatars.githubusercontent.com/u/43960064?v=4&s=128"
+  },
+  "hoppscotch/hoppscotch": {
+    "file": "assets/projects/hoppscotch--hoppscotch.webp",
+    "label": "hoppscotch",
+    "kind": "owner-avatar",
+    "source": "https://avatars.githubusercontent.com/u/56705483?v=4&s=128"
+  },
+  "immich-app/immich": {
+    "file": "assets/projects/immich-app--immich.svg",
+    "label": "immich",
+    "kind": "project-logo",
+    "source": "https://raw.githubusercontent.com/immich-app/immich/main/design/immich-logo-stacked-light.svg"
+  },
+  "koala73/worldmonitor": {
+    "file": "assets/projects/koala73--worldmonitor.webp",
+    "label": "worldmonitor",
+    "kind": "project-logo",
+    "source": "https://raw.githubusercontent.com/koala73/worldmonitor/main/public/favico/apple-touch-icon.png"
+  },
+  "langchain-ai/langgraph": {
+    "file": "assets/projects/langchain-ai--langgraph.webp",
+    "label": "langchain-ai",
+    "kind": "owner-avatar",
+    "source": "https://avatars.githubusercontent.com/u/126733545?v=4&s=128"
+  },
+  "langgenius/dify": {
+    "file": "assets/projects/langgenius--dify.webp",
+    "label": "langgenius",
+    "kind": "owner-avatar",
+    "source": "https://avatars.githubusercontent.com/u/127165244?v=4&s=128"
+  },
+  "localsend/localsend": {
+    "file": "assets/projects/localsend--localsend.webp",
+    "label": "localsend",
+    "kind": "owner-avatar",
+    "source": "https://avatars.githubusercontent.com/u/120677616?v=4&s=128"
+  },
+  "makeplane/plane": {
+    "file": "assets/projects/makeplane--plane.webp",
+    "label": "makeplane",
+    "kind": "owner-avatar",
+    "source": "https://avatars.githubusercontent.com/u/115727700?v=4&s=128"
+  },
+  "microsoft/autogen": {
+    "file": "assets/projects/microsoft--autogen.svg",
+    "label": "autogen",
+    "kind": "project-logo",
+    "source": "https://microsoft.github.io/autogen/0.2/img/ag.svg"
+  },
+  "modelcontextprotocol/servers": {
+    "file": "assets/projects/modelcontextprotocol--servers.webp",
+    "label": "modelcontextprotocol",
+    "kind": "owner-avatar",
+    "source": "https://avatars.githubusercontent.com/u/182288589?v=4&s=128"
+  },
+  "n8n-io/n8n": {
+    "file": "assets/projects/n8n-io--n8n.webp",
+    "label": "n8n-io",
+    "kind": "owner-avatar",
+    "source": "https://avatars.githubusercontent.com/u/45487711?v=4&s=128"
+  },
+  "nexu-io/open-design": {
+    "file": "assets/projects/nexu-io--open-design.webp",
+    "label": "nexu-io",
+    "kind": "owner-avatar",
+    "source": "https://avatars.githubusercontent.com/u/263625318?v=4&s=128"
+  },
+  "nocodb/nocodb": {
+    "file": "assets/projects/nocodb--nocodb.webp",
+    "label": "nocodb",
+    "kind": "owner-avatar",
+    "source": "https://avatars.githubusercontent.com/u/50206778?v=4&s=128"
+  },
+  "open-webui/open-webui": {
+    "file": "assets/projects/open-webui--open-webui.webp",
+    "label": "open-webui",
+    "kind": "owner-avatar",
+    "source": "https://avatars.githubusercontent.com/u/158137808?v=4&s=128"
+  },
+  "outline/outline": {
+    "file": "assets/projects/outline--outline.webp",
+    "label": "outline",
+    "kind": "owner-avatar",
+    "source": "https://avatars.githubusercontent.com/u/1765001?v=4&s=128"
+  },
+  "penpot/penpot": {
+    "file": "assets/projects/penpot--penpot.webp",
+    "label": "penpot",
+    "kind": "owner-avatar",
+    "source": "https://avatars.githubusercontent.com/u/30179644?v=4&s=128"
+  },
+  "punkpeye/awesome-mcp-servers": {
+    "file": "assets/projects/punkpeye--awesome-mcp-servers.webp",
+    "label": "punkpeye",
+    "kind": "owner-avatar",
+    "source": "https://avatars.githubusercontent.com/u/108313943?v=4&s=128"
+  },
+  "rtk-ai/rtk": {
+    "file": "assets/projects/rtk-ai--rtk.webp",
+    "label": "rtk-ai",
+    "kind": "owner-avatar",
+    "source": "https://avatars.githubusercontent.com/u/258253854?v=4&s=128"
+  },
+  "rustdesk/rustdesk": {
+    "file": "assets/projects/rustdesk--rustdesk.webp",
+    "label": "rustdesk",
+    "kind": "owner-avatar",
+    "source": "https://avatars.githubusercontent.com/u/71636191?v=4&s=128"
+  },
+  "ruvnet/ruflo": {
+    "file": "assets/projects/ruvnet--ruflo.webp",
+    "label": "ruflo",
+    "kind": "project-logo",
+    "source": "https://raw.githubusercontent.com/ruvnet/ruflo/main/ruflo/assets/ruflo-small.jpeg"
+  },
+  "tt-a1i/archify": {
+    "file": "assets/projects/tt-a1i--archify.webp",
+    "label": "tt-a1i",
+    "kind": "owner-avatar",
+    "source": "https://avatars.githubusercontent.com/u/53142663?v=4&s=128"
+  },
+  "twentyhq/twenty": {
+    "file": "assets/projects/twentyhq--twenty.webp",
+    "label": "twentyhq",
+    "kind": "owner-avatar",
+    "source": "https://avatars.githubusercontent.com/u/119600397?v=4&s=128"
+  },
+  "usebruno/bruno": {
+    "file": "assets/projects/usebruno--bruno.webp",
+    "label": "bruno",
+    "kind": "project-logo",
+    "source": "https://raw.githubusercontent.com/usebruno/bruno/main/assets/images/logo-transparent.png"
+  },
+  "volcengine/OpenViking": {
+    "file": "assets/projects/volcengine--openviking.webp",
+    "label": "OpenViking",
+    "kind": "project-logo",
+    "source": "https://raw.githubusercontent.com/volcengine/OpenViking/main/docs/images/ov-logo.png"
+  },
+  "zhu1090093659/dsh-web": {
+    "file": "assets/projects/zhu1090093659--dsh-web.webp",
+    "label": "dsh-web",
+    "kind": "project-logo",
+    "source": "https://raw.githubusercontent.com/zhu1090093659/dsh-web/dev/desktop/resources/icon.png"
+  }
+}

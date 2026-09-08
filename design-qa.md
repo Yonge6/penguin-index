@@ -1,3 +1,9 @@
+## 2026-09-08 redesign in progress
+
+Final result: blocked pending new visual selection. The user rejected the warm-paper draft before publication. Do not treat earlier QA below as acceptance for this redesign. Three new image directions have been submitted; implementation and public verification must follow the selected visual.
+
+Functional changes are retained locally: extended pricing details/history, weekly bar views, original date presets/custom range, model comparison picker, model-family logos and project/maintainer assets. Data-level tests: 10 passed. Browser interaction and responsive acceptance are still pending for the final redesign. The homepage shortcut strip was removed at the user's request. No current-turn changes have been published to GitHub Pages.
+
 # Design QA — selected option 2
 
 final result: passed
@@ -73,3 +79,13 @@ See functional-audit.md for original-site omissions. Prior visual acceptance was
 - Public HTML, JS, CSS, project JSON, model JSON and penguin mark return HTTP 200; fetched asset/data SHA-256 hashes match the local build.
 - Actual public browser renders 10 project rows, 5 usage entries, 5 price entries and one chart canvas. Skills weekly remains selected when switching to English. Standalone Open Source still renders 10 rows. Restored the public preview to Chinese Home / Products / Daily.
 - Current public screenshot: qa/functional-audit-2026-09-08/16-home-live.png, saved and inspected.
+
+## 2026-09-08 — Signal Studio cards and restored interactions
+
+final result: passed for the selected visual and scoped interactions; full original-site parity is not claimed.
+
+Source: design-options/2026-09-08/signal-studio-cards.png. Source and actual usage screenshot were viewed together at 1488×1058. Iterations corrected an inherited homepage padding override and Chinese navigation underline specificity. Hero copy, header and card edges now all measure 48px on desktop and 20px at 390px. Accurate platform scope, snapshot dates and proportional bar lengths take priority over generated mock copy/geometry.
+
+Evidence: qa/final-signal/usage-desktop.png, home-mobile.png, usage-mobile.png, pricing-mobile.png, pricing-desktop-en.png. The desktop and mobile layouts were opened and inspected. No document overflow at 390px. The mobile chart scrolls within its own card to preserve model labels. No unresolved P0/P1/P2 visual defect in this scope. Physical-device and full assistive-technology testing were not performed.
+
+Verified 1-week horizontal / 1-month stacked bars; comparison picker add/remove/reset; PNG download at 2162×1000; Hunyuan free prices; Qwen tier, official and third-party links and recorded history; CNY input 0.15, output 1.50 and blended 0.4875; English UI; both explanations open on load. Fixed header top remained 0 at scrollY 1456.5. No broken image resources or app-origin console errors (browser-extension warnings excluded). Automated data suite: 10/10 passed; production build passed. See functional-audit.md for remaining feature omissions.

@@ -6,3 +6,25 @@ test('usage excludes incomplete week, sums selected observations, preserves miss
 test('prices use source currency figures, retain free and missing values',()=>{const r={latest:{input_usd:0,input_cny:0,output_cny:4}};assert.equal(priceValue(r,'USD','input'),0);assert.equal(priceValue(r,'USD','output'),null);assert.equal(priceValue(r,'CNY','output'),4)});
 test('English and Chinese dictionaries have matching complete keys',()=>{assert.deepEqual(Object.keys(copy.en).sort(),Object.keys(copy.zh).sort());for(const locale of Object.values(copy))for(const v of Object.values(locale))assert.ok(v.length>0)});
 test('model snapshot has real timestamps and complete weeks',()=>{const data=JSON.parse(fs.readFileSync('public/data/models.json'));assert.ok(Date.parse(data.generated_at));for(const count of [4,12,26]){const r=usageRows(data.trends,count);assert.equal(r.weeks.length,count);assert.ok(r.weeks.every(w=>w[1]==='f'))}});
+import {usageWindow,stackRows,weekEnd} from '../src/usage-data.js';
+import {blendedPrice,priceHistory} from '../src/price-details.js';
+test('usage ranges preserve incomplete weeks, align custom weeks, and compare prior complete week',()=>{
+ const d={updated_at:'2026-09-08',weeks:[['2026-08-24','f',100],['2026-08-31','f',120],['2026-09-07','i',10]],models:[{id:'a'},{id:'a:free'}],points:[[0,0,40],[1,0,60],[2,1,5]]};
+ const w=usageWindow(d,'1w');assert.equal(w.platformTotal,120);assert.equal(w.growth,.2);assert.equal(w.from,'2026-08-31');assert.equal(w.to,'2026-09-06');
+ const m=usageWindow(d,'1m');assert.equal(m.platformTotal,230);assert.equal(m.to,'2026-09-08');assert.deepEqual(m.rows[1].values,[null,null,5]);
+ const c=usageWindow(d,'custom',{from:'2026-09-02',to:'2026-09-03'});assert.equal(c.from,'2026-08-31');assert.equal(c.weeks.length,1);
+ assert.equal(usageWindow(d,'custom',{from:'2026-09-03',to:'2026-09-02'}).invalid,true);assert.equal(weekEnd('2025-12-29'),'2026-01-04');
+});
+test('every stacked week reconciles with platform total across all presets',()=>{
+ const d=JSON.parse(fs.readFileSync('public/data/models.json')).trends;
+ for(const preset of ['1w','1m','3m','6m','1y']){const w=usageWindow(d,preset),s=stackRows(w);w.weeks.forEach((week,i)=>assert.equal(s.top.reduce((a,r)=>a+(r.values[i]??0),0)+s.others[i],week[2]));}
+});
+test('blended price and 30-day history preserve zero and unknown values',()=>{
+ assert.equal(blendedPrice(1,5),2);assert.equal(blendedPrice(0,0),0);assert.equal(blendedPrice(null,5),null);
+ const m={latest:{date:'2026-01-10'},history:[['2025-12-11',5,5],['2025-12-12',0,null],['2026-01-10',7,14],['2026-01-11',9,9]]};
+ assert.deepEqual(priceHistory(m,'USD',7),[{date:'2025-12-12',input:0,output:null},{date:'2026-01-10',input:1,output:2}]);assert.equal(priceHistory(m,'USD',0)[1].input,null);
+});
+test('project logos cover every bundled ranking and reference existing local assets',()=>{
+ const manifest=JSON.parse(fs.readFileSync('public/assets/projects/manifest.json'));
+ for(const c of ['product','skill','dsh'])for(const p of ['daily','weekly','monthly'])for(const row of JSON.parse(fs.readFileSync(`public/data/${c}/${p}.json`))){assert.ok(manifest[row.fullName]);assert.ok(fs.existsSync('public/'+manifest[row.fullName].file));}
+});

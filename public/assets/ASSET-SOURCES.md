@@ -1,0 +1,9 @@
+# Asset provenance
+
+Model brand marks are sourced from the static SVG distribution of @lobehub/icons-static-svg 1.95.0: https://github.com/lobehub/lobe-icons and https://github.com/lobehub/lobe-icons/blob/master/packages/static-svg/README.md. Upstream license is retained in models/LICENSE-lobe-icons. Marks identify the provider/model family, not a unique version. Anonymous models use a neutral Phosphor fingerprint icon.
+
+Project assets have individual source URLs and types recorded in projects/manifest.json. project-logo denotes a project mark; owner-avatar denotes a GitHub maintainer/organization avatar. The manifest covers all 44 unique repositories in the nine bundled project snapshots. Bitmaps are optimized to a maximum 96px WebP; original vectors remain SVG.
+
+lavender-glass.webp is an AI-generated decorative hero artwork created through the user-authorized ChatGPT image workflow on 2026-09-08, matching the selected Signal Studio reference. The 2508×627 source was optimized to 1920×480 WebP (10,914 bytes). It contains no interface text. Rejected paper texture is kept only in ignored QA archives.
+
+Tencent Technology and Penguin Index brand assets predate this update.
