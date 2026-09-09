@@ -37,3 +37,9 @@ Latest wordmark refinement: enlarge the Chinese name, tighten English letter/lin
 The user corrected the enlarged wordmark: Chinese text should be about the same visual size as the Tencent Technology Chinese lettering to its left, not oversized. Retain compact English aligned beneath. Replace the home hero art with a pale blue wave image generated using ChatGPT in Chrome, with quiet space behind the editable slogan.
 
 The user approved the blue wave hero and requests the identical artwork on every other ranking header, including benchmarks, usage, API pricing and open source. This supersedes the earlier home-only scope.
+
+The latest annotation requests small text above and below the homepage headline, matching other ranking headers. Retain the main slogan and add an English overview eyebrow plus a short localized description of model usage, API prices and open-source growth. This supersedes the earlier single-line-only hero requirement.
+
+Remove the decorative Chinese/English hero motto at the upper right of the usage header, as annotated. Keep the usage title, subtitle and data summary.
+
+Scale the full Penguin brand lockup (symbol and bilingual text together) down slightly to visually match Tencent Technology height: 34px desktop, 24px mobile.

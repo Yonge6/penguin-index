@@ -62,13 +62,17 @@ dialog{background:#fff;border-color:#e0e5f2;border-radius:14px;box-shadow:0 24px
 @media(max-width:600px){.home .hero h1{word-break:keep-all}}
 
 /* Compact bilingual wordmark with one shared text width. */
-.site-header .brand-wordmark{width:89px;display:flex;flex-direction:column;align-items:stretch;gap:3px}
-.site-header .brand-wordmark strong,html[lang=zh-CN] .site-header .brand-wordmark strong{font-size:21px;line-height:1.05;letter-spacing:1px;font-weight:750;white-space:nowrap}
-.site-header .brand-wordmark span{font-size:7.45px;line-height:1.1;letter-spacing:0;margin:0;font-weight:600;white-space:nowrap}
-@media(max-width:600px){.site-header .brand-wordmark{width:80px;gap:3px}.site-header .brand-wordmark strong,html[lang=zh-CN] .site-header .brand-wordmark strong{font-size:19px;letter-spacing:1px}.site-header .brand-wordmark span{font-size:6.8px;letter-spacing:0}}
+.site-header .brand-wordmark{width:72px;display:flex;flex-direction:column;align-items:stretch;gap:3px}
+.site-header .brand-wordmark strong,html[lang=zh-CN] .site-header .brand-wordmark strong{font-size:17px;line-height:1.05;letter-spacing:.8px;font-weight:750;white-space:nowrap}
+.site-header .brand-wordmark span{font-size:6.02px;line-height:1.1;letter-spacing:0;margin:0;font-weight:600;white-space:nowrap}
+@media(max-width:600px){.site-header .brand-wordmark{width:65px;gap:2px}.site-header .brand-wordmark strong,html[lang=zh-CN] .site-header .brand-wordmark strong{font-size:15.2px;letter-spacing:.8px}.site-header .brand-wordmark span{font-size:5.44px;letter-spacing:0}}
 
 /* Shared generated wave artwork for home and all ranking headers. */
 .home .hero,.page-heading,.usage-hero{background-image:url('../public/assets/blue-wave.webp');background-color:#edf7ff;background-blend-mode:normal;background-position:center;background-size:cover}
 @media(max-width:600px){.home .hero,.page-heading,.usage-hero{background-position:60% center}}
 
 .usage-hero .hero-motto{color:#385875}
+
+/* Match the full Penguin lockup to the publisher logo height. */
+.site-header .brand-mark{width:31px;height:34px}.site-header .brand-mark img{width:46.4px;height:46.4px;left:-7.7px;top:-5.4px}
+@media(max-width:600px){.site-header .brand-mark{width:21px;height:24px}.site-header .brand-mark img{width:30.4px;height:30.4px;left:-4.9px;top:-2.8px}}

@@ -105,3 +105,7 @@ Scoped visual check passed: Chinese wordmark reduced to 21px desktop, comparable
 ## 2026-09-09 — Shared wave ranking headers
 
 Extended the approved home wave asset to benchmark, usage, pricing and open-source headers. Inspected all four desktop pages and usage at 390px (document width 390px). Darkened the small usage motto for contrast over the new artwork. Existing layouts, data and controls are preserved.
+
+## 2026-09-09 — Hero supporting copy and matched brand height
+
+Home now has the same eyebrow/headline/description hierarchy as ranking pages, with localized supporting text. Removed usage header decorative motto. Both publisher and Penguin lockup boxes measure 34px on desktop and 24px on mobile. Visually checked home in Chinese/English at 390px and desktop usage; mobile document has no horizontal overflow.
