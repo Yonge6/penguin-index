@@ -101,3 +101,7 @@ Browser checks: Global/China tabs switch between426/193 rows and update the URL;
 ## 2026-09-09 — Compact wordmark and blue wave hero
 
 Scoped visual check passed: Chinese wordmark reduced to 21px desktop, comparable to Tencent Technology lettering, with 7.45px compact English beneath. Actual rendered text widths: 89.35 / 89.02px desktop and 81.45 / 81.25px mobile, sharing the same left edge. Checked Chinese and English desktop home plus 390px mobile; no horizontal document overflow. New ChatGPT-in-Chrome wave background fits the home banner, with readable editable slogan; other page artwork stays intact. Screenshots: qa/wave-2026-09-09/home-desktop-zh.png and home-mobile-zh.png. Production build passed.
+
+## 2026-09-09 — Shared wave ranking headers
+
+Extended the approved home wave asset to benchmark, usage, pricing and open-source headers. Inspected all four desktop pages and usage at 390px (document width 390px). Darkened the small usage motto for contrast over the new artwork. Existing layouts, data and controls are preserved.

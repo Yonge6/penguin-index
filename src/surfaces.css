@@ -67,6 +67,8 @@ dialog{background:#fff;border-color:#e0e5f2;border-radius:14px;box-shadow:0 24px
 .site-header .brand-wordmark span{font-size:7.45px;line-height:1.1;letter-spacing:0;margin:0;font-weight:600;white-space:nowrap}
 @media(max-width:600px){.site-header .brand-wordmark{width:80px;gap:3px}.site-header .brand-wordmark strong,html[lang=zh-CN] .site-header .brand-wordmark strong{font-size:19px;letter-spacing:1px}.site-header .brand-wordmark span{font-size:6.8px;letter-spacing:0}}
 
-/* Generated wave artwork for the homepage slogan. */
-.home .hero{background-image:url('../public/assets/blue-wave.webp');background-color:#edf7ff;background-blend-mode:normal;background-position:center;background-size:cover}
-@media(max-width:600px){.home .hero{background-position:60% center}}
+/* Shared generated wave artwork for home and all ranking headers. */
+.home .hero,.page-heading,.usage-hero{background-image:url('../public/assets/blue-wave.webp');background-color:#edf7ff;background-blend-mode:normal;background-position:center;background-size:cover}
+@media(max-width:600px){.home .hero,.page-heading,.usage-hero{background-position:60% center}}
+
+.usage-hero .hero-motto{color:#385875}

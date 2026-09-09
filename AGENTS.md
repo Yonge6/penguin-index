@@ -35,3 +35,5 @@ The latest supplied logo reference sets the English wordmark to PENGUIN INTELLIG
 Latest wordmark refinement: enlarge the Chinese name, tighten English letter/line spacing, and align both lines to the same visual width. Keep the Chinese-over-English logo lockup consistent in both language modes; localize the navigation and page content normally.
 
 The user corrected the enlarged wordmark: Chinese text should be about the same visual size as the Tencent Technology Chinese lettering to its left, not oversized. Retain compact English aligned beneath. Replace the home hero art with a pale blue wave image generated using ChatGPT in Chrome, with quiet space behind the editable slogan.
+
+The user approved the blue wave hero and requests the identical artwork on every other ranking header, including benchmarks, usage, API pricing and open source. This supersedes the earlier home-only scope.

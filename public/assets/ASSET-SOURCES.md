@@ -10,4 +10,4 @@ Tencent Technology and Penguin Index brand assets predate this update.
 
 2026-09-09: the glass artwork is rendered with a blue background and luminosity blend mode, preserving its geometry. All UI accents use blue. Provider / project brand marks retain their original colors.
 
-blue-wave.webp: decorative home hero generated in ChatGPT through Chrome on 2026-09-09, as explicitly requested by the user. Conversation: https://chatgpt.com/c/6aa0c82a-1c70-83e9-b500-3bdcb1ad1b95 . Original downloaded PNG: 2508×627; optimized WebP: 1920×480, 31,938 bytes. No baked-in text. Other page heroes retain the prior glass artwork.
+blue-wave.webp: decorative home hero generated in ChatGPT through Chrome on 2026-09-09, as explicitly requested by the user. Conversation: https://chatgpt.com/c/6aa0c82a-1c70-83e9-b500-3bdcb1ad1b95 . Original downloaded PNG: 2508×627; optimized WebP: 1920×480, 31,938 bytes. No baked-in text. The same wave artwork is now shared by all ranking headers, per subsequent user annotation.
