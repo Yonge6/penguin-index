@@ -50,3 +50,9 @@ Replace the old symbol + bilingual text lockup with the exact user-supplied comp
 Home ranking cards use equal widths and consistent sizing in the existing order: projects, usage, pricing. Default desktop layout is two columns, mobile one; home previews show five rows with full-ranking links, while complete standalone lists and filters remain available.
 
 Align the divider and ranking label to the Chinese lettering within the supplied bitmap logo, accounting for the artwork’s internal white space (slight downward optical adjustment).
+
+Home card “View rankings” links belong at the lower left consistently. Remove the preview dataset notice from the home project card; retain standalone-page behavior.
+
+The user cancelled moving/resizing the home benchmark card; keep its existing full-width placement and compact height.
+
+Place the weekly usage trend card to the right of API pricing in the second desktop row, matching its height. Keep the compact full-width benchmark card below that row. Mobile order: products, usage, prices, weekly trend, benchmark.

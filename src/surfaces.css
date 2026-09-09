@@ -104,3 +104,8 @@ dialog{background:#fff;border-color:#e0e5f2;border-radius:14px;box-shadow:0 24px
 
 .site-header .brand .brand-section{position:relative;top:3px}
 @media(max-width:600px){.site-header .brand .brand-section{top:2px}}
+
+.home .home-projects>.inline-link{margin-top:auto;align-self:flex-start}.home-chart-link{margin-top:24px;display:flex;justify-content:flex-start}
+
+.home-layout .home-chart{min-width:0;min-height:760px;margin:0;padding:24px;display:flex;flex-direction:column}.home-layout .home-chart .chart{height:440px;min-width:0}.home-layout .home-chart .home-chart-link{margin-top:auto}.home-layout .home-chart .quiet{font-size:11px;line-height:1.6}
+@media(max-width:760px){.home-layout .home-chart{min-height:720px;padding:20px}.home-layout .home-chart .chart{height:420px}}

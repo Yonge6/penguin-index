@@ -113,3 +113,7 @@ Home now has the same eyebrow/headline/description hierarchy as ranking pages, w
 ## 2026-09-09 — Supplied logo and equal home ranking cards
 
 Replaced header lockup with exact user PNG and localized ranking label, optically aligned to its Chinese lettering. Removed the entire home hero. Home now uses equal ranking cards in project / usage / pricing order, with five-row previews and preserved full-list links. Verified 1055px desktop cards each 467.5×760px, mobile cards equal width and height; 390px Chinese/English document has no horizontal overflow. Inspected 612px header. Search rtk yields its existing rank 04; reloaded to clear the test query. Full standalone project rendering remains uncapped.
+
+## 2026-09-09 — Consistent lower-left links and trend placement
+
+Moved home project and trend full-ranking links to lower-left card footers; all four measured 25px from left and bottom on desktop. Removed home-only preview notice. Weekly trend now shares the second row with API prices (604×760px each at 1328px); benchmark remains a compact full-width card beneath. At 390px all four cards are 350×720px in the requested order and document scrollWidth is 390. ECharts renders inside its reduced card width with scrollable legend.
