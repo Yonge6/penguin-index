@@ -5,9 +5,9 @@ import {CanvasRenderer} from 'echarts/renderers';
 import {modelBrand} from './model-brand';
 import {stackRows} from './usage-data';
 echarts.use([LineChart,BarChart,GridComponent,TooltipComponent,LegendComponent,DataZoomComponent,TitleComponent,GraphicComponent,CanvasRenderer]);
-export const chartColors=['#9254ff','#338fff','#12b8dc','#3accdf','#79a9ff','#b18bff','#8662ee','#a697f5','#c6b8ff','#5483e8'];
+export const chartColors=['#54a1ff','#338fff','#12b8dc','#3accdf','#79a9ff','#8bbfff','#62a1ee','#97c1f5','#b8d8ff','#5483e8'];
 const compact=n=>new Intl.NumberFormat('en',{notation:'compact',maximumFractionDigits:1}).format(n);
-const colors=dark=>({bg:dark?'#16182d':'#ffffff',text:dark?'#f1f3fc':'#161b33',muted:dark?'#a5aecb':'#7c85a7',line:dark?'#343953':'#e9edf6',other:dark?'#56607e':'#d4deec'});
+const colors=dark=>({bg:dark?'#16202d':'#ffffff',text:dark?'#f1f6fc':'#162333',muted:dark?'#a5b6cb':'#7c8fa7',line:dark?'#344253':'#e9edf6',other:dark?'#56687e':'#d4deec'});
 export function createChart(element,data){return createUsageChart(element,data,{mode:'total',lang:document.documentElement.lang.startsWith('zh')?'zh':'en'});}
 export function createUsageChart(element,data,options={}){
  const {mode='total',theme='light',selected=[],singleWeek=false,lang='en',title='',onHover}=options;
@@ -29,12 +29,12 @@ export function createUsageChart(element,data,options={}){
  xAxis:horizontal?{type:'value',axisLabel:{color:c.muted,fontSize:10,formatter:compact},splitLine:{lineStyle:{color:c.line}},axisLine:{show:false}}:{type:'category',data:data.weeks.map(w=>w[0]),axisTick:{show:false},axisLine:{lineStyle:{color:c.line}},axisLabel:{color:c.muted,fontSize:10,hideOverlap:true,formatter:v=>v.slice(5)}},
  yAxis:horizontal?{type:'category',inverse:true,data:[...top.map(r=>r.name+(r.id.includes(':free')?' · Free':'')),zh?'其他模型':'Others'],axisTick:{show:false},axisLine:{show:false},axisLabel:{color:c.text,fontSize:12,rich,formatter:(value,index)=>index<top.length?'{rank|'+String(index+1).padStart(2,'0')+'}'+(rich['brand'+index]?'{brand'+index+'|}':'')+'{spacer| }{name|'+(value.length>27?value.slice(0,25)+'…':value)+'}':'{rank|'+String(index+1).padStart(2,'0')+'}{name|'+value+'}'}}:{type:'value',axisLabel:{color:c.muted,fontSize:10,formatter:compact},splitLine:{lineStyle:{color:c.line,type:'dashed'}}},
  legend:horizontal?{show:false}:{type:'scroll',bottom:23,itemWidth:12,itemHeight:7,textStyle:{fontSize:10,color:c.text},pageTextStyle:{color:c.muted},formatter:name=>names.get(name)||name},
- dataZoom:horizontal?[]:[{type:'slider',bottom:55,height:15,borderColor:c.line,backgroundColor:c.bg,fillerColor:theme==='dark'?'rgba(144,128,255,.18)':'rgba(107,82,255,.12)',handleStyle:{color:'#7661ff'},textStyle:{color:c.muted,fontSize:9}}],
+ dataZoom:horizontal?[]:[{type:'slider',bottom:55,height:15,borderColor:c.line,backgroundColor:c.bg,fillerColor:theme==='dark'?'rgba(74,145,240,.18)':'rgba(30,118,240,.12)',handleStyle:{color:'#61a8ff'},textStyle:{color:c.muted,fontSize:9}}],
  graphic:[{type:'text',left:16,bottom:4,style:{text:'PENGUIN INDEX · OpenRouter'+(data.updated?' · '+data.updated.slice(0,10):''),fill:c.muted,font:'9px Inter'}}],series});
  if(onHover&&!horizontal){chart.on('mouseover',event=>{if(event.componentType==='series')onHover(event.dataIndex)});chart.on('globalout',()=>onHover(null))}
  return chart;
 }
 export function createPriceChart(element,history,currency,t){
  const chart=echarts.init(element);const symbol=currency==='USD'?'$':'¥';
- chart.setOption({animation:false,color:['#7654f8','#22b8d3'],textStyle:{fontFamily:'Inter, sans-serif'},tooltip:{trigger:'axis',renderMode:'richText',confine:true,valueFormatter:v=>v==null?'—':symbol+Number(v).toFixed(4)},legend:{bottom:0,itemWidth:13,itemHeight:7,textStyle:{fontSize:10,color:'#7c85a7'}},grid:{top:22,left:12,right:14,bottom:48,containLabel:true},xAxis:{type:'category',data:history.map(p=>p.date),axisTick:{show:false},axisLine:{lineStyle:{color:'#e3e8f4'}},axisLabel:{fontSize:9,color:'#7c85a7',formatter:v=>v.slice(5),hideOverlap:true}},yAxis:{type:'value',min:0,axisLabel:{fontSize:9,color:'#7c85a7',formatter:v=>symbol+v},splitLine:{lineStyle:{color:'#edf0f7',type:'dashed'}}},series:['input','output'].map(key=>({name:t[key],type:'line',data:history.map(p=>p[key]),connectNulls:false,showSymbol:history.length===1,lineStyle:{width:2.5},step:'end'}))});return chart;
+ chart.setOption({animation:false,color:['#549ef8','#22b8d3'],textStyle:{fontFamily:'Inter, sans-serif'},tooltip:{trigger:'axis',renderMode:'richText',confine:true,valueFormatter:v=>v==null?'—':symbol+Number(v).toFixed(4)},legend:{bottom:0,itemWidth:13,itemHeight:7,textStyle:{fontSize:10,color:'#7c8fa7'}},grid:{top:22,left:12,right:14,bottom:48,containLabel:true},xAxis:{type:'category',data:history.map(p=>p.date),axisTick:{show:false},axisLine:{lineStyle:{color:'#e3e8f4'}},axisLabel:{fontSize:9,color:'#7c8fa7',formatter:v=>v.slice(5),hideOverlap:true}},yAxis:{type:'value',min:0,axisLabel:{fontSize:9,color:'#7c8fa7',formatter:v=>symbol+v},splitLine:{lineStyle:{color:'#edf0f7',type:'dashed'}}},series:['input','output'].map(key=>({name:t[key],type:'line',data:history.map(p=>p[key]),connectNulls:false,showSymbol:history.length===1,lineStyle:{width:2.5},step:'end'}))});return chart;
 }

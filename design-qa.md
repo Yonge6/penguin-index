@@ -89,3 +89,11 @@ Source: design-options/2026-09-08/signal-studio-cards.png. Source and actual usa
 Evidence: qa/final-signal/usage-desktop.png, home-mobile.png, usage-mobile.png, pricing-mobile.png, pricing-desktop-en.png. The desktop and mobile layouts were opened and inspected. No document overflow at 390px. The mobile chart scrolls within its own card to preserve model labels. No unresolved P0/P1/P2 visual defect in this scope. Physical-device and full assistive-technology testing were not performed.
 
 Verified 1-week horizontal / 1-month stacked bars; comparison picker add/remove/reset; PNG download at 2162×1000; Hunyuan free prices; Qwen tier, official and third-party links and recorded history; CNY input 0.15, output 1.50 and blended 0.4875; English UI; both explanations open on load. Fixed header top remained 0 at scrollY 1456.5. No broken image resources or app-origin console errors (browser-extension warnings excluded). Automated data suite: 10/10 passed; production build passed. See functional-audit.md for remaining feature omissions.
+
+## 2026-09-09 — Blue theme, concise branding and pricing scopes
+
+final result: passed for this scoped annotation update.
+
+Preserved the supplied screen structure and white cards while changing purple accents/chart colors to blue, rendering the existing glass artwork with a blue luminosity blend, reducing the homepage hero to its exact single requested slogan, and changing the brand to 企鹅智库 / PENGUIN INTELLIGENCE. Mobile hero wrapping was corrected after inspection; header, hero and cards retain shared margins. Both 390px home and pricing documents have scrollWidth 390. Fixed header and bilingual controls remain present.
+
+Browser checks: Global/China tabs switch between426/193 rows and update the URL; search Mercury2.5 yields USD0.04 input /0.15 output with blended0.0675; global detail exposes the OpenRouter model link and unknown release/weights/history accurately. Changing to English preserves the China scope and193 rows. China historical data and details remain separate. Global CNY is explicitly an estimate using the reference exchange rate. Eleven data tests passed; production build passed. This is not a claim of complete original-site feature parity.

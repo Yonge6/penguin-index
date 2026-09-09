@@ -7,3 +7,5 @@ Project assets have individual source URLs and types recorded in projects/manife
 lavender-glass.webp is an AI-generated decorative hero artwork created through the user-authorized ChatGPT image workflow on 2026-09-08, matching the selected Signal Studio reference. The 2508×627 source was optimized to 1920×480 WebP (10,914 bytes). It contains no interface text. Rejected paper texture is kept only in ignored QA archives.
 
 Tencent Technology and Penguin Index brand assets predate this update.
+
+2026-09-09: the glass artwork is rendered with a blue background and luminosity blend mode, preserving its geometry. All UI accents use blue. Provider / project brand marks retain their original colors.
