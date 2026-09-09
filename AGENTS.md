@@ -56,3 +56,5 @@ Home card “View rankings” links belong at the lower left consistently. Remov
 The user cancelled moving/resizing the home benchmark card; keep its existing full-width placement and compact height.
 
 Place the weekly usage trend card to the right of API pricing in the second desktop row, matching its height. Keep the compact full-width benchmark card below that row. Mobile order: products, usage, prices, weekly trend, benchmark.
+
+All four home full-ranking links use identical styling and the exact label 查看完整榜单 / View full rankings.
