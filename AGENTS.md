@@ -31,3 +31,7 @@ Default both the usage data explanation and footer ranking methodology to expand
 Replace purple UI accents and chart colors with blue; keep pale canvas, white cards and fixed navigation. Home hero has exactly one slogan: 用数据看清 AI 浪潮的真实流向. Brand is 企鹅智库 without 榜单. Pricing has Global models / Chinese models tabs. Global uses the dated public OpenRouter Models API text-token snapshot (including Chinese providers on OpenRouter); China retains original direct-provider snapshot. Show their distinct source dates. Global CNY is an estimate using the stored reference exchange rate, not official CNY billing. Never fabricate release dates, weight licensing, or history when the API does not provide them.
 
 The latest supplied logo reference sets the English wordmark to PENGUIN INTELLIGENCE. Apply this exact wording in both language modes, with 企鹅智库 as the Chinese name. The user requested the English wording, not replacement of the current penguin symbol.
+
+Latest wordmark refinement: enlarge the Chinese name, tighten English letter/line spacing, and align both lines to the same visual width. Keep the Chinese-over-English logo lockup consistent in both language modes; localize the navigation and page content normally.
+
+The user corrected the enlarged wordmark: Chinese text should be about the same visual size as the Tencent Technology Chinese lettering to its left, not oversized. Retain compact English aligned beneath. Replace the home hero art with a pale blue wave image generated using ChatGPT in Chrome, with quiet space behind the editable slogan.
