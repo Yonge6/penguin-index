@@ -109,3 +109,7 @@ Extended the approved home wave asset to benchmark, usage, pricing and open-sour
 ## 2026-09-09 — Hero supporting copy and matched brand height
 
 Home now has the same eyebrow/headline/description hierarchy as ranking pages, with localized supporting text. Removed usage header decorative motto. Both publisher and Penguin lockup boxes measure 34px on desktop and 24px on mobile. Visually checked home in Chinese/English at 390px and desktop usage; mobile document has no horizontal overflow.
+
+## 2026-09-09 — Supplied logo and equal home ranking cards
+
+Replaced header lockup with exact user PNG and localized ranking label, optically aligned to its Chinese lettering. Removed the entire home hero. Home now uses equal ranking cards in project / usage / pricing order, with five-row previews and preserved full-list links. Verified 1055px desktop cards each 467.5×760px, mobile cards equal width and height; 390px Chinese/English document has no horizontal overflow. Inspected 612px header. Search rtk yields its existing rank 04; reloaded to clear the test query. Full standalone project rendering remains uncapped.

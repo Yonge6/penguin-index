@@ -43,3 +43,10 @@ The latest annotation requests small text above and below the homepage headline,
 Remove the decorative Chinese/English hero motto at the upper right of the usage header, as annotated. Keep the usage title, subtitle and data summary.
 
 Scale the full Penguin brand lockup (symbol and bilingual text together) down slightly to visually match Tencent Technology height: 34px desktop, 24px mobile.
+
+## Latest supplied logo and homepage removal
+Replace the old symbol + bilingual text lockup with the exact user-supplied complete Chinese logo (penguin-logo-supplied.png), preserving its black/blue design. Add a vertical divider and 榜单 to its right (Rankings in English). The latest annotation removes the entire home hero banner, including artwork, heading and supporting copy; ranking content begins below navigation. Other ranking headers retain their wave artwork. These instructions supersede earlier home hero and wordmark directions.
+
+Home ranking cards use equal widths and consistent sizing in the existing order: projects, usage, pricing. Default desktop layout is two columns, mobile one; home previews show five rows with full-ranking links, while complete standalone lists and filters remain available.
+
+Align the divider and ranking label to the Chinese lettering within the supplied bitmap logo, accounting for the artwork’s internal white space (slight downward optical adjustment).
