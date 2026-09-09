@@ -121,3 +121,5 @@ dialog{background:#fff;border-color:#e0e5f2;border-radius:14px;box-shadow:0 24px
 .home .inline-link:hover svg,.home .inline-link:focus-visible svg{transform:translateX(4px)}
 @media(max-width:760px){.home-projects,.home-layout .home-digest,.home-layout .home-chart{min-height:0}}
 @media(prefers-reduced-motion:reduce){.home .inline-link,.home .inline-link svg{transition:none}.home .inline-link:hover svg,.home .inline-link:focus-visible svg{transform:none}}
+
+.search:focus-within{border-color:var(--acid);outline:2px solid var(--acid);outline-offset:0}.search:focus-within input{outline:none}input:focus,select:focus{outline-color:var(--acid)}

@@ -60,3 +60,5 @@ Place the weekly usage trend card to the right of API pricing in the second desk
 All four home full-ranking links use identical styling and the exact label 查看完整榜单 / View full rankings.
 
 Reduce excess whitespace above home full-ranking links; use theme blue and a subtle arrow/color hover transition. Keep same-row cards equal height and compact mobile cards. Usage chart ranks, including Others at 10, must share an identical logo-slot width so the numeral column aligns.
+
+All search fields must use the theme-blue outer border/focus ring while focused or typing, consistent with filters. No green search focus states.
