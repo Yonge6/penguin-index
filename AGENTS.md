@@ -64,3 +64,5 @@ Reduce excess whitespace above home full-ranking links; use theme blue and a sub
 All search fields must use the theme-blue outer border/focus ring while focused or typing, consistent with filters. No green search focus states.
 
 2026-09-11: Remove the divider and 榜单 / Rankings suffix to the right of the supplied Penguin logo in the shared header. This supersedes the earlier suffix request.
+
+2026-09-11: Restore the home blue-wave heading above the ranking cards, reusing other ranking pages’ heading style. Title: 企鹅智库榜单 / Penguin Intelligence Rankings; eyebrow: 00 / OVERVIEW; supporting line: 用数据看清 AI 浪潮的真实流向, localized in English. This supersedes removal of the home banner. Keep the logo suffix removed.
