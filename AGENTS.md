@@ -62,3 +62,5 @@ All four home full-ranking links use identical styling and the exact label 查�
 Reduce excess whitespace above home full-ranking links; use theme blue and a subtle arrow/color hover transition. Keep same-row cards equal height and compact mobile cards. Usage chart ranks, including Others at 10, must share an identical logo-slot width so the numeral column aligns.
 
 All search fields must use the theme-blue outer border/focus ring while focused or typing, consistent with filters. No green search focus states.
+
+2026-09-11: Remove the divider and 榜单 / Rankings suffix to the right of the supplied Penguin logo in the shared header. This supersedes the earlier suffix request.
