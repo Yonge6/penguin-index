@@ -125,3 +125,10 @@ dialog{background:#fff;border-color:#e0e5f2;border-radius:14px;box-shadow:0 24px
 .search:focus-within{border-color:var(--acid);outline:2px solid var(--acid);outline-offset:0}.search:focus-within input{outline:none}input:focus,select:focus{outline-color:var(--acid)}
 
 .home{padding-top:0}.home .page-heading{margin-inline:calc(-1 * var(--page-inset));padding-inline:var(--page-inset)}
+
+/* Shared ranking-header typography and vertical alignment. */
+.page-heading,.inner-page .page-heading,.usage-hero{padding-top:36px}
+.page-heading>h1,.usage-hero>h1,html[lang=zh-CN] .page-heading>h1,html[lang=zh-CN] .usage-hero>h1{font-size:42px;line-height:1.15;letter-spacing:-1.5px;margin:14px 0}
+.page-heading>.eyebrow,.usage-hero>.eyebrow{font-size:10px;font-weight:500;line-height:1.5;letter-spacing:2px;margin:0 0 14px;color:#7b9cc5}
+.page-heading>p:last-child,.usage-hero>.usage-intro{font-size:16px;line-height:1.5;letter-spacing:normal;color:#60748d;margin:12px 0 0;max-width:none}
+@media(max-width:600px){.page-heading,.inner-page .page-heading,.usage-hero{padding-top:29px}.page-heading>h1,.usage-hero>h1,html[lang=zh-CN] .page-heading>h1,html[lang=zh-CN] .usage-hero>h1{font-size:32px;letter-spacing:-1px}.page-heading>p:last-child,.usage-hero>.usage-intro{font-size:14px}}
