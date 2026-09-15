@@ -117,3 +117,8 @@ Replaced header lockup with exact user PNG and localized ranking label, opticall
 ## 2026-09-09 — Consistent lower-left links and trend placement
 
 Moved home project and trend full-ranking links to lower-left card footers; all four measured 25px from left and bottom on desktop. Removed home-only preview notice. Weekly trend now shares the second row with API prices (604×760px each at 1328px); benchmark remains a compact full-width card beneath. At 390px all four cards are 350×720px in the requested order and document scrollWidth is 390. ECharts renders inside its reduced card width with scrollable legend.
+
+
+## 2026-09-15 — Branded usage exports, mobile and hidden benchmarks
+
+Verified actual image generation in the browser for Chinese single-week ranking (1080×1538), monthly stacked trend and dark comparison, plus English comparison (1080×1370). Export includes the supplied Tencent Technology and Penguin logos, wave header, date range, source and snapshot; all legend items appear in static exports. At 390px, page scrollWidth is 390, mobile weekly rows expose all 10 ranks and full values/shares (including Others 42.2T / 36.6%). Image preview offers download and supported file sharing; WeChat UA uses an actual image with enabled native touch callout and long-press instructions. Native iOS/Android WeChat album write was not verified on a physical device. No browser errors observed. Benchmark navigation/home teaser are absent; a direct benchmark URL normalizes to home. Favicon inspected as the supplied blue-eye penguin crop. Build and 11 data tests passed.
