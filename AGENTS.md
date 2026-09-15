@@ -72,3 +72,5 @@ Align usage header title and both supporting text lines with all other ranking h
 Homepage Chinese heading is exactly 企鹅智库｜榜单, including the full-width separator. Keep existing responsive heading styles and the header logo without a suffix.
 
 2026-09-15: Use the supplied blue-eye penguin symbol for the browser favicon. Hide model benchmarks from navigation and homepage; old benchmark URLs resolve to home while the feature is unpublished. Usage image export must include both Tencent Technology and Penguin Intelligence logos, title, time period, source and snapshot; export at a stable high resolution independent of the viewport. WeChat H5 uses a real image preview that supports long-press Save Image to Photos; do not claim direct album writes. Mobile weekly usage rows must show all names, values and shares without horizontal clipping.
+
+2026-09-15: Remove the supporting slogan below the homepage heading in both languages. Keep the overview eyebrow, 企鹅智库｜榜单 heading and blue-wave background. Other page descriptions stay unchanged.
