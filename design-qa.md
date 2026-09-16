@@ -122,3 +122,12 @@ Moved home project and trend full-ranking links to lower-left card footers; all 
 ## 2026-09-15 — Branded usage exports, mobile and hidden benchmarks
 
 Verified actual image generation in the browser for Chinese single-week ranking (1080×1538), monthly stacked trend and dark comparison, plus English comparison (1080×1370). Export includes the supplied Tencent Technology and Penguin logos, wave header, date range, source and snapshot; all legend items appear in static exports. At 390px, page scrollWidth is 390, mobile weekly rows expose all 10 ranks and full values/shares (including Others 42.2T / 36.6%). Image preview offers download and supported file sharing; WeChat UA uses an actual image with enabled native touch callout and long-press instructions. Native iOS/Android WeChat album write was not verified on a physical device. No browser errors observed. Benchmark navigation/home teaser are absent; a direct benchmark URL normalizes to home. Favicon inspected as the supplied blue-eye penguin crop. Build and 11 data tests passed.
+
+
+## 2026-09-16 — First-level rankings, price pagination and contextual methodology
+
+Products, Skills and DSH Ecosystem now have independent navigation links using their existing channel deep links, with channel-specific title/eyebrow/description and no standalone tab strip. Homepage retains compact preview tabs. Verified Skill weekly / DSH daily, correct active navigation, distinct rows and source summaries. Header switches to two rows at 1200px; 390px Chinese navigation fits, English scrolls within the navigation without document overflow.
+
+Pricing scope tabs remain directly below the fixed header (measured 112px top at both 390px and 1060px). Both datasets paginate at 20 rows with top/bottom controls. Verified global second page 21–40, final page 421–426, China scope reset to 1–20 / 193, and search reset to page one. CSV still receives all filtered rows. A pagination data test checks full coverage with no duplicates and smaller/empty result sets.
+
+Methodology is attached to each relevant ranking: expanded on standalone pages, compact expandable notes on home cards. Header summaries use Data updated / 数据更新 and actual data dates. Home same-row cards remain equal height. Footer now has centered Powered by HY4 only; inspected visually. No daily-sync claim is displayed because this repository has no verified data-sync schedule. Build and all 12 data tests passed; browser error log was empty.

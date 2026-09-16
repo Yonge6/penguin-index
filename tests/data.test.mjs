@@ -29,3 +29,12 @@ test('project logos cover every bundled ranking and reference existing local ass
  for(const c of ['product','skill','dsh'])for(const p of ['daily','weekly','monthly'])for(const row of JSON.parse(fs.readFileSync(`public/data/${c}/${p}.json`))){assert.ok(manifest[row.fullName]);assert.ok(fs.existsSync('public/'+manifest[row.fullName].file));}
 });
 test('global price snapshot preserves units, unique models and unavailable metadata',()=>{const d=JSON.parse(fs.readFileSync('public/data/global-prices.json'));assert.equal(d.source_url,'https://openrouter.ai/api/v1/models');assert.ok(Date.parse(d.updated_at));assert.ok(d.models.length>100);assert.equal(new Set(d.models.map(r=>r.slug)).size,d.models.length);for(const r of d.models){for(const k of ['input','output']){assert.ok(Number.isFinite(r.latest[k+'_usd'])&&r.latest[k+'_usd']>=0);assert.ok(Math.abs(r.latest[k+'_cny']-r.latest[k+'_usd']*d.usd_to_cny)<0.000001)}assert.equal(r.is_open_source,null);assert.deepEqual(r.history,[]);assert.equal(r.release_date,null)}});
+
+import {paginatePrices} from '../src/data.js';
+test('price pagination covers every result once and clamps shorter or empty result sets',()=>{
+ const rows=Array.from({length:426},(_,id)=>({id}));
+ const pages=Array.from({length:22},(_,i)=>paginatePrices(rows,i+1));
+ assert.deepEqual(pages.flatMap(p=>p.rows),rows);assert.equal(pages[0].rows.length,20);assert.equal(pages.at(-1).rows.length,6);
+ assert.equal(paginatePrices(rows.slice(0,3),22).page,1);assert.equal(paginatePrices(rows,-1).page,1);
+ const empty=paginatePrices([],22);assert.equal(empty.page,1);assert.equal(empty.end,0);assert.deepEqual(empty.rows,[]);
+});

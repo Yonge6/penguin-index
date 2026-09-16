@@ -57,7 +57,7 @@ export async function createUsagePoster({data,mode,theme,selected,singleWeek,lan
  }
  let footer=480+chartHeight+30;
  text(ctx,zh?'数据来源：OpenRouter':'Source: OpenRouter',48,footer,20,'#45668a',500);
- text(ctx,(zh?'数据快照：':'Snapshot: ')+data.updated.slice(0,10),48,footer+34,20,'#45668a');
+ text(ctx,(zh?'数据更新：':'Data updated: ')+data.updated.slice(0,10),48,footer+34,20,'#45668a');
  const note=zh?'统计 OpenRouter 平台 Token 用量，不代表整个 AI 市场。'+(data.weeks.some(w=>w[1]==='i')?'包含尚未结束的当周数据。':''):'OpenRouter token usage only; not the entire AI market.'+(data.weeks.some(w=>w[1]==='i')?' Includes the incomplete current week.':'');
  wrap(ctx,note,48,footer+73,984,18,'#627f9f');
  text(ctx,'PENGUIN INTELLIGENCE  /  企鹅智库',48,height-30,16,'#627f9f',500);

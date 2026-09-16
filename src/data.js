@@ -11,3 +11,10 @@ export function readState() {
  let saved;try{saved=localStorage.getItem('penguin-locale')}catch{}
  return {priceScope:p.get('scope')==='china'?'china':'global',page:routes.includes(route)?route:'home',lang:['zh','en'].includes(p.get('lang'))?p.get('lang'):saved|| (navigator.language.startsWith('zh')?'zh':'en'),channel:['product','skill','dsh'].includes(p.get('channel'))?p.get('channel'):'product',period:['daily','weekly','monthly'].includes(p.get('period'))?p.get('period'):'daily'};
 }
+
+export function paginatePrices(rows,requestedPage=1){
+ const total=rows.length,pages=Math.max(1,Math.ceil(total/20));
+ const page=Math.min(pages,Math.max(1,Number.isFinite(requestedPage)?Math.floor(requestedPage):1));
+ const start=(page-1)*20,end=Math.min(start+20,total);
+ return {rows:rows.slice(start,end),page,pages,start,end,total};
+}
