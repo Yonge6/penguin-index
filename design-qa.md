@@ -139,3 +139,6 @@ Methodology is attached to each relevant ranking: expanded on standalone pages, 
 - DSH removed from navigation, home tabs and accepted route state; tested old link normalizes to product.
 - Checked Chinese and English at 390px plus desktop 1217/1440px. No page overflow; supplied logos loaded. Price table still has 20 rows and both source dates.
 - Vite build, 12 data tests, and git diff --check passed.
+
+## 2026-09-17 — Model logos and Skills card
+Kimi white foreground corrected for light backgrounds; 19 provider mappings added from MIT LobeHub static icons. All mapped assets exist and SVGs parse; unknown brands retain fallback. Home Skills now has independent filters and correct weekly Skills navigation; product daily card stays unchanged during Skills filtering. Home disclosures removed, standalone disclosures retained. Build and 13 tests pass.

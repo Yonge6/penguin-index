@@ -38,3 +38,16 @@ test('price pagination covers every result once and clamps shorter or empty resu
  assert.equal(paginatePrices(rows.slice(0,3),22).page,1);assert.equal(paginatePrices(rows,-1).page,1);
  const empty=paginatePrices([],22);assert.equal(empty.page,1);assert.equal(empty.end,0);assert.deepEqual(empty.rows,[]);
 });
+
+import {modelBrand} from '../src/model-brand.js';
+test('mapped model brands reference local assets and Kimi remains visible on light surfaces',()=>{
+ const data=JSON.parse(fs.readFileSync('public/data/models.json'));
+ const global=JSON.parse(fs.readFileSync('public/data/global-prices.json'));
+ for(const model of [...data.trends.models,...data.prices.models,...global.models]){
+  const brand=modelBrand(model);if(brand)assert.ok(fs.existsSync(`public/assets/models/${brand.file}`),`${model.name}: ${brand.file}`);
+ }
+ for(const provider of ['moonshot','moonshotai'])assert.equal(modelBrand({provider}).file,'kimi-color.svg');
+ const kimi=fs.readFileSync('public/assets/models/kimi-color.svg','utf8');assert.match(kimi,/fill="#111111"/);assert.match(kimi,/fill="#1783FF"/);
+ for(const provider of ['mistralai','cohere','bytedance-seed','baidu','microsoft'])assert.ok(modelBrand({provider}));
+ assert.equal(modelBrand({provider:'stealth'}),null);
+});

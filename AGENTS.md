@@ -94,3 +94,5 @@ Show methodology with the corresponding ranking rather than a shared mixed foote
 2026-09-17 masthead correction: Site title and publisher logos must stay on one line on mobile too, with matching visual heights. Place the single divider between site title and the logo pair; no divider between Tencent and Penguin. Use a 112px two-row mobile header and responsive logo/type sizing down to 320px instead of stacking the brand group.
 
 2026-09-17: Simplify language controls to compact EN / 中 buttons with a subtle selected background, no full-height underline; retain accessible English / 简体中文 labels.
+
+2026-09-17: Home Agent Skills must be an independent card rather than a tab in Products; each card has independent period/search/language/saved filters and its own full-ranking URL. Keep existing four-card order and append Skills. Remove all homepage methodology disclosures; preserve standalone notes. Kimi logo must remain visible on light surfaces; use verified local model marks and explicit fallback for unknown/failed logos.
