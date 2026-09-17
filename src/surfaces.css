@@ -162,3 +162,39 @@ dialog{background:#fff;border-color:#e0e5f2;border-radius:14px;box-shadow:0 24px
 
 .source-summary{font-size:12px;color:#60748d;line-height:1.8;margin:18px 0 24px;overflow-wrap:anywhere}.source-summary a{color:#416f9e;text-decoration:underline;text-underline-offset:3px}.usage-hero .source-summary{margin:12px 0 0;max-width:850px}.data-notes{margin:28px 0 8px;padding:20px 0;border-top:1px solid var(--line);color:#60748d;font-size:13px;line-height:1.8}.data-notes summary{cursor:pointer;font-weight:600;color:#41617f}.data-notes-body{padding-top:14px;display:grid;gap:12px}.data-notes p{line-height:1.8}.data-notes a{text-decoration:underline;text-underline-offset:3px}.data-notes-updated{font-size:11px}.home-layout .data-notes.compact{width:100%;margin:18px 0 0;padding:12px 0 0;font-size:11px}.data-notes.compact .data-notes-body{gap:10px}.footer>.powered-by{margin:0;padding:0;border:0}.price-table sup{color:var(--acid);font-size:12px}
 @media(max-width:600px){.source-summary{font-size:11px}.data-notes{font-size:12px}.site-header .masthead nav,html[lang=zh-CN] .site-header .masthead nav{gap:14px}}
+
+/* AI Trend Rankings is the site name; the supplied publishers stay together. */
+.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+.home{padding-top:28px}
+.site-name{font-size:22px;font-weight:700;letter-spacing:-.6px;white-space:nowrap;color:var(--ink);line-height:1.25}
+.publisher-lockup{display:flex;align-items:center;gap:18px;flex-shrink:0}
+.site-header .brand-group{gap:24px}
+@media(max-width:1400px){
+ :root{--header-h:112px}
+ .site-header .masthead{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:60px 52px;gap:0 15px}
+ .site-header nav{grid-row:2;grid-column:1/-1;justify-content:space-between;height:52px;overflow-x:auto}
+ .site-header .locale{grid-column:2;grid-row:1}
+ .site-header .brand-group{grid-column:1;grid-row:1;gap:20px}
+}
+@media(max-width:760px){
+ :root{--header-h:144px}
+ .site-header .masthead{grid-template-rows:94px 50px;column-gap:8px}
+ .site-header .brand-group{flex-direction:column;align-items:flex-start;justify-content:center;gap:8px}
+ .site-name{font-size:20px}
+ .publisher-lockup{gap:12px}
+ .site-header .publisher-logo{width:104px;height:27px}
+ .site-header .brand{padding-left:12px}
+ .site-header .brand-logo{width:100px;height:27px}
+ .site-header .locale{align-self:start;height:44px;font-size:10px;gap:8px}
+ .site-header nav{height:50px}
+ .home{padding-top:20px}
+}
+@media(max-width:380px){.site-name{font-size:18px}.site-header .locale{font-size:9px;gap:5px}}
+
+/* The simplified usage heading no longer needs room for summary metrics. */
+.usage-hero{min-height:0}
+
+/* Every ranking page uses the same three-line heading component. */
+.page-heading,.inner-page .page-heading,.usage-hero{min-height:0;padding-block:36px;margin-bottom:26px}
+@media(max-width:600px){.page-heading,.inner-page .page-heading,.usage-hero{padding-block:29px;margin-bottom:20px}}
+.data-note-section h3{margin:0 0 8px;font-size:14px;line-height:1.6;color:#41617f}.data-note-section p+p{margin-top:8px}.data-notes-sources{border-top:1px solid var(--line);padding-top:12px;font-size:11px}.data-notes-sources p+p{margin-top:6px}.compact .data-note-section h3{font-size:12px}

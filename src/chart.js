@@ -31,7 +31,7 @@ export function createUsageChart(element,data,options={}){
  yAxis:horizontal?{type:'category',inverse:true,data:[...top.map(r=>r.name+(r.id.includes(':free')?' · Free':'')),zh?'其他模型':'Others'],axisTick:{show:false},axisLine:{show:false},axisLabel:{color:c.text,fontSize:12,rich,formatter:(value,index)=>'{rank|'+String(index+1).padStart(2,'0')+'}'+(rich['brand'+index]?'{brand'+index+'|}':'{brandPlaceholder| }')+'{spacer| }{name|'+(value.length>27?value.slice(0,25)+'…':value)+'}'}}:{type:'value',axisLabel:{color:c.muted,fontSize:10,formatter:compact},splitLine:{lineStyle:{color:c.line,type:'dashed'}}},
  legend:horizontal?{show:false}:{type:exportMode?'plain':'scroll',bottom:exportMode?10:23,itemWidth:12,itemHeight:7,textStyle:{fontSize:exportMode?13:10,color:c.text},pageTextStyle:{color:c.muted},formatter:name=>names.get(name)||name},
  dataZoom:horizontal||exportMode?[]:[{type:'slider',bottom:55,height:15,borderColor:c.line,backgroundColor:c.bg,fillerColor:theme==='dark'?'rgba(74,145,240,.18)':'rgba(30,118,240,.12)',handleStyle:{color:'#61a8ff'},textStyle:{color:c.muted,fontSize:9}}],
- graphic:exportMode?[]:[{type:'text',left:16,bottom:4,style:{text:'PENGUIN INDEX · OpenRouter'+(data.updated?' · '+data.updated.slice(0,10):''),fill:c.muted,font:'9px Inter'}}],series});
+ graphic:exportMode?[]:[{type:'text',left:16,bottom:4,style:{text:'AI 趋势榜 · OpenRouter'+(data.updated?' · '+data.updated.slice(0,10):''),fill:c.muted,font:'9px Inter'}}],series});
  if(onHover&&!horizontal){chart.on('mouseover',event=>{if(event.componentType==='series')onHover(event.dataIndex)});chart.on('globalout',()=>onHover(null))}
  return chart;
 }

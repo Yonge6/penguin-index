@@ -131,3 +131,11 @@ Products, Skills and DSH Ecosystem now have independent navigation links using t
 Pricing scope tabs remain directly below the fixed header (measured 112px top at both 390px and 1060px). Both datasets paginate at 20 rows with top/bottom controls. Verified global second page 21–40, final page 421–426, China scope reset to 1–20 / 193, and search reset to page one. CSV still receives all filtered rows. A pagination data test checks full coverage with no duplicates and smaller/empty result sets.
 
 Methodology is attached to each relevant ranking: expanded on standalone pages, compact expandable notes on home cards. Header summaries use Data updated / 数据更新 and actual data dates. Home same-row cards remain equal height. Footer now has centered Powered by HY4 only; inspected visually. No daily-sync claim is displayed because this repository has no verified data-sync schedule. Build and all 12 data tests passed; browser error log was empty.
+
+## 2026-09-17 — AI Trend Rankings refresh
+- Site name added before original publisher pair; homepage wave heading removed.
+- Six requested navigation entries, five shared heading variants; benchmarks still coming soon.
+- Removed usage hero summary and metrics; moved source metadata below separated methodology/disclaimer sections.
+- DSH removed from navigation, home tabs and accepted route state; tested old link normalizes to product.
+- Checked Chinese and English at 390px plus desktop 1217/1440px. No page overflow; supplied logos loaded. Price table still has 20 rows and both source dates.
+- Vite build, 12 data tests, and git diff --check passed.
