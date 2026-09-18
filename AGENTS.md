@@ -96,3 +96,5 @@ Show methodology with the corresponding ranking rather than a shared mixed foote
 2026-09-17: Simplify language controls to compact EN / 中 buttons with a subtle selected background, no full-height underline; retain accessible English / 简体中文 labels.
 
 2026-09-17: Home Agent Skills must be an independent card rather than a tab in Products; each card has independent period/search/language/saved filters and its own full-ranking URL. Keep existing four-card order and append Skills. Remove all homepage methodology disclosures; preserve standalone notes. Kimi logo must remain visible on light surfaces; use verified local model marks and explicit fallback for unknown/failed logos.
+
+2026-09-18: Period filters use white backgrounds for unselected options on homepage and standalone rankings while preserving the blue selected state. Toolbar and pagination selects use a custom chevron inset slightly farther from the right edge. On the usage page, remove the English decorative motto from the right snapshot card, compact the desktop one-week chart to match its height, and show the selected dark-theme control with a dark background and white text.
