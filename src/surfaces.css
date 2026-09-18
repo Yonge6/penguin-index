@@ -221,13 +221,12 @@ dialog{background:#fff;border-color:#e0e5f2;border-radius:14px;box-shadow:0 24px
 .site-header .locale button[aria-pressed=true]{color:var(--acid);background:#fff;box-shadow:0 1px 3px #253f5e12}
 @media(max-width:420px){.site-header .masthead .locale{padding:2px;gap:0;height:28px;font-size:10px}.site-header .locale button{min-width:23px;padding:0 4px}}
 
-/* 2026-09-18 control polish: white idle periods and an inset select chevron. */
-.toolbar .segmented button:not([aria-pressed=true]){background:#fff}
+/* 2026-09-18 control polish: use an inset select chevron. */
 .toolbar select,.pagination-buttons select{-webkit-appearance:none;appearance:none;padding-right:38px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='none'%3E%3Cpath d='m3 4.5 3 3 3-3' stroke='%2360788D' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:12px 12px}
 
-/* Keep the one-week chart compact and align it with the simplified snapshot card. */
-@media(min-width:851px){.single-week-chart>.usage-canvas{height:450px}}
+/* Keep the one-week chart and snapshot card tight around their content. */
+@media(min-width:851px){.usage-chart-grid{align-items:start}.single-week-chart>.usage-canvas{height:380px}}
 .chart-actions .segmented button:nth-child(2)[aria-pressed=true]{background:#182432;color:#fff}
 
-/* Separate ranking table headers clearly from white data rows. */
-.price-table thead th,.project-table thead th{background:#edf4fc;border-bottom-color:#d4e0ee}
+/* Separate standalone ranking table headers clearly from white data rows. */
+.inner-page .price-table thead th,.inner-page .project-table thead th{background:#dce8f6;color:#60758f;border-bottom-color:#c4d5e8}
