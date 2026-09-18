@@ -33,8 +33,12 @@ const english={
  product:{source:['Data comes from the GitHub REST API. Rankings select independently usable AI applications, agents and developer products from public repositories and record Star totals periodically.'],method:['Projects must have a clear purpose, practical utility, ongoing maintenance and pass content-safety checks. Agent Skills, model weights, training and inference frameworks, SDKs, tutorials, resource directories, forks and archived repositories are excluded.',growthEn,rankEn],disclaimer:['GitHub provides current Star totals; period growth is calculated from public snapshots recorded at different times. Star growth measures community attention, not product capability, quality, safety, commercial performance or user scale. These rankings are not investment, purchasing or usage advice.']},
  skill:{source:['Data comes from the GitHub REST API. Rankings select reusable Skills, capability packages and workflows that AI agents can install or invoke, and record repository Star totals periodically.'],method:['Repositories must document agent usage or compatibility and provide reusable instructions, scripts, templates or knowledge. Complete AI products, general libraries, model weights, prompt-only collections, resource directories, tutorials, forks and archived repositories are excluded.',growthEn,rankEn,'One repository may contain multiple Skills. Stars belong to the repository and do not establish the independent popularity of an individual Skill.'],disclaimer:['GitHub provides current Star totals; period growth is calculated from public snapshots recorded at different times. Star growth reflects community attention, not compatibility, safety, effectiveness or suitability for every agent platform. Review repository contents and permissions before installing Skills that require scripts, networking, keys or local-file access. These rankings are not installation or usage advice.']}
 };
+export function getDataNotes(kind,channel='product',lang='zh'){
+ const key=kind==='projects'?channel:kind;
+ return (lang==='zh'?notes:english)[key];
+}
 export default function DataNotes({kind,channel='product',lang,updated,globalUpdated,chinaUpdated,rate,compact=false}){
- const zh=lang==='zh',key=kind==='projects'?channel:kind,content=(zh?notes:english)[key];
+ const zh=lang==='zh',content=getDataNotes(kind,channel,lang);
  return <details className={'data-notes'+(compact?' compact':'')} open={!compact}>
   <summary>{zh?'数据来源与统计口径':'Sources & methodology'}</summary>
   <div className="data-notes-body">

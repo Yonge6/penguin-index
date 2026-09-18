@@ -100,3 +100,5 @@ Show methodology with the corresponding ranking rather than a shared mixed foote
 2026-09-18: Keep the original pale-gray background for unselected day/week/month period filters on homepage, Open Source and Agent Skills rankings. Toolbar and pagination selects use a custom chevron inset slightly farther from the right edge. On the usage page, remove all decorative motto copy from the right snapshot card, give the desktop one-week chart comfortable spacing while keeping both cards equal in height, keep the comparison sidebar equal in height to its chart panel, and show the selected dark-theme control with a dark background and white text.
 
 2026-09-18: Keep the original table-header background colors on Pricing, Open Source and Agent Skills rankings.
+
+2026-09-18: Usage share images mirror the live page: use the latest AI Trend Rankings plus Tencent Technology and Penguin Intelligence masthead, show the same page title and introduction without removed total or growth summary metrics, and reuse the live usage data-source, methodology and disclaimer copy.
