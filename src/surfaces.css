@@ -228,3 +228,6 @@ dialog{background:#fff;border-color:#e0e5f2;border-radius:14px;box-shadow:0 24px
 /* Keep the one-week chart compact and align it with the simplified snapshot card. */
 @media(min-width:851px){.single-week-chart>.usage-canvas{height:450px}}
 .chart-actions .segmented button:nth-child(2)[aria-pressed=true]{background:#182432;color:#fff}
+
+/* Separate ranking table headers clearly from white data rows. */
+.price-table thead th,.project-table thead th{background:#edf4fc;border-bottom-color:#d4e0ee}
