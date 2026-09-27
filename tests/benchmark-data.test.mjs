@@ -19,6 +19,8 @@ test('record selection respects cutoff and prefers standard configuration',()=>{
  ];
  assert.equal(chooseBenchmarkRecord(records,'2026-09-21').rank,5);
  assert.equal(chooseBenchmarkRecord(records,'2026-08-01').rank,1);
+ assert.equal(chooseBenchmarkRecord(records,'2026-09-21','2026-09-15').rank,5);
+ assert.equal(chooseBenchmarkRecord(records,'2026-09-20','2026-09-15'),null);
  assert.equal(chooseBenchmarkRecord(records,'2026-01-01'),null);
 });
 

@@ -9,16 +9,16 @@ export function benchmarkCutoff(latest,preset,custom){
  return date.toISOString().slice(0,10);
 }
 
-export function chooseBenchmarkRecord(records=[],cutoff){
- const valid=records.filter(record=>record.date&&record.date<=cutoff&&record.rank!=null);
+export function chooseBenchmarkRecord(records=[],cutoff,start=null){
+ const valid=records.filter(record=>record.date&&record.date<=cutoff&&(!start||record.date>=start)&&record.rank!=null);
  return valid.sort((a,b)=>{
   const standardA=a.config==='标准/未注明'?1:0,standardB=b.config==='标准/未注明'?1:0;
   return standardB-standardA||b.date.localeCompare(a.date)||a.rank-b.rank;
  })[0]||null;
 }
 
-export function resolveBenchmarkModel(model,benchmarkIds,cutoff){
- const results=Object.fromEntries(benchmarkIds.map(id=>[id,chooseBenchmarkRecord(model.records[id],cutoff)]));
+export function resolveBenchmarkModel(model,benchmarkIds,cutoff,start=null){
+ const results=Object.fromEntries(benchmarkIds.map(id=>[id,chooseBenchmarkRecord(model.records[id],cutoff,start)]));
  const coverage=Object.values(results).filter(Boolean).length;
  const country=String(model.country||'').toLowerCase();
  return {...model,results,coverage,region:chinaCountries.has(country)?'china':'overseas',type:model.openWeights?'open':'closed'};
