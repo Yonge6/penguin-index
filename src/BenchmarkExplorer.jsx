@@ -1,4 +1,4 @@
-import React,{useMemo,useState} from 'react';
+import React,{useMemo,useRef,useState} from 'react';
 import {CheckIcon,MagnifyingGlassIcon,XIcon} from '@phosphor-icons/react';
 import {benchmarkCutoff,filterBenchmarkModels,resolveBenchmarkModel} from './benchmark-data';
 
@@ -43,6 +43,7 @@ export default function BenchmarkExplorer({data,lang}){
  const zh=lang==='zh',latest=data.generated_at.slice(0,10),benchmarkIds=data.benchmarks.map(b=>b.id);
  const [type,setType]=useState('all'),[region,setRegion]=useState('all'),[coverage,setCoverage]=useState('all'),[preset,setPreset]=useState('latest'),[custom,setCustom]=useState(latest);
  const [selected,setSelected]=useState([]),[search,setSearch]=useState(''),[pickerOpen,setPickerOpen]=useState(false),[expanded,setExpanded]=useState(null),[sortBy,setSortBy]=useState(null);
+ const customDateRef=useRef(null);
  const cutoff=benchmarkCutoff(latest,preset,custom);
  const resolved=useMemo(()=>data.models.map(model=>resolveBenchmarkModel(model,benchmarkIds,cutoff)),[data.models,cutoff]);
  const modelPool=resolved.filter(model=>model.coverage>0);
@@ -65,7 +66,7 @@ export default function BenchmarkExplorer({data,lang}){
      {pickerOpen&&<div className="benchmark-suggestions" onMouseDown={e=>e.preventDefault()}>{suggestions.map(model=><button key={model.id} onClick={()=>toggleModel(model.id)} aria-pressed={selected.includes(model.id)} disabled={!selected.includes(model.id)&&selected.length>=5}><span className="benchmark-check">{selected.includes(model.id)&&<CheckIcon weight="bold"/>}</span><span><strong>{model.name}</strong><small>{model.organization} · {model.coverage}/24</small></span></button>)}{!suggestions.length&&<p>{zh?'未找到匹配模型':'No matching models'}</p>}</div>}</div></div>
     {selected.length>0&&<div className="benchmark-chips">{selected.map(id=>{const model=modelPool.find(item=>item.id===id);return model&&<button key={id} onClick={()=>toggleModel(id)}>{model.name}<XIcon size={12}/></button>})}</div>}
    </div>
-   <div className="benchmark-snapshots" role="group" aria-label={zh?'时间快照':'Time snapshot'}>{['latest','week','month','quarter'].map(item=><button key={item} aria-pressed={preset===item} onClick={()=>setPreset(item)}>{shiftLabel(item,lang)}</button>)}<label className={preset==='custom'?'active':''}><span>{zh?'自定义':'Custom'}</span><input type="date" min="2025-01-01" max={latest} value={custom} onChange={e=>{setCustom(e.target.value);setPreset('custom')}}/></label></div>
+   <div className="benchmark-snapshots" role="group" aria-label={zh?'时间快照':'Time snapshot'}>{['latest','week','month','quarter'].map(item=><button key={item} aria-pressed={preset===item} onClick={()=>setPreset(item)}>{shiftLabel(item,lang)}</button>)}<div className={'benchmark-custom-date '+(preset==='custom'?'active':'')}><button type="button" aria-pressed={preset==='custom'} onClick={()=>{customDateRef.current?.focus();customDateRef.current?.showPicker?.()}}>{preset==='custom'?formatDate(custom,lang):(zh?'自定义':'Custom')}</button><input ref={customDateRef} aria-label={zh?'选择自定义快照日期':'Choose a custom snapshot date'} type="date" min="2025-01-01" max={latest} value={custom} onChange={e=>{if(e.target.value){setCustom(e.target.value);setPreset('custom')}}}/></div></div>
   </div>
   <p className="benchmark-status">{zh?'当前查看：':'Viewing: '}<strong>{preset==='latest'?(zh?'最新快照':'Latest snapshot'):zh?`截至 ${formatDate(cutoff,lang)}`:`Through ${formatDate(cutoff,lang)}`}</strong>{zh?'。每列保留该时点或此前最近一次有效结果。':'. Each column keeps its latest valid result at or before this date.'}</p>
   {selected.length>0&&<button className="benchmark-clear" onClick={()=>setSelected([])}>{zh?'显示全部模型':'Show all models'}</button>}
