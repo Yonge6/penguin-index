@@ -94,7 +94,7 @@ export default function BenchmarkExplorer({data,lang}){
  },[shownBenchmarks.length]);
  function toggleModel(id){setSelected(current=>current.includes(id)?current.filter(item=>item!==id):current.length<5?[...current,id]:current)}
  function showTooltip(event,benchmark){
-  const rect=event.currentTarget.getBoundingClientRect(),width=340,estimatedHeight=330,pad=12;
+  const rect=event.currentTarget.getBoundingClientRect(),width=300,estimatedHeight=350,pad=12;
   const left=Math.min(Math.max(rect.left+rect.width/2-width/2,pad),window.innerWidth-width-pad);
   const top=Math.min(rect.bottom+9,window.innerHeight-estimatedHeight-pad);
   setTooltip({benchmark,left,top:Math.max(pad,top)});
