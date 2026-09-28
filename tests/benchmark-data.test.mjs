@@ -27,6 +27,7 @@ test('record selection respects cutoff and prefers standard configuration',()=>{
 test('bundled benchmark data has 24 benchmarks and ranked models',()=>{
  const data=JSON.parse(fs.readFileSync('public/data/benchmarks.json','utf8'));
  assert.equal(data.benchmarks.length,24);
+ assert.ok(data.benchmarks.every(item=>/^\d{4}-\d{2}-\d{2}$/.test(item.latest_date)),'every benchmark exposes its source snapshot date');
  assert.ok(data.models.length>=300);
  const ids=data.benchmarks.map(item=>item.id);
  const resolved=data.models.map(model=>resolveBenchmarkModel(model,ids,'2026-09-21'));
