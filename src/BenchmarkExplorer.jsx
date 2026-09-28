@@ -57,7 +57,6 @@ export default function BenchmarkExplorer({data,lang}){
  const benchmarkDate=id=>resolved.map(model=>model.results[id]?.date).filter(Boolean).sort().at(-1)||data.benchmarks.find(b=>b.id===id)?.latest_date;
  function toggleModel(id){setSelected(current=>current.includes(id)?current.filter(item=>item!==id):current.length<5?[...current,id]:current)}
  return <section className="benchmark-explorer">
-  <div className="benchmark-intro"><div><p className="eyebrow">CAPABILITY MAP</p><h2>{zh?'一张表，看清模型擅长什么':'See what every model does best'}</h2></div><p>{zh?'点击表头中的能力分类，展开该类另外 2 个 benchmark':'Click a capability category in the table header to reveal its other two benchmarks.'}</p></div>
   <div className="benchmark-toolbar" aria-label={zh?'榜单筛选与时间设置':'Ranking filters and snapshot'}>
    <div className="benchmark-filters">
     <label><span>{zh?'模型类型':'Model type'}</span><select value={type} onChange={e=>setType(e.target.value)}><option value="all">{zh?'全部':'All'}</option><option value="closed">{zh?'闭源':'Closed'}</option><option value="open">{zh?'开放权重':'Open weights'}</option></select></label>
