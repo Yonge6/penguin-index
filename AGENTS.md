@@ -106,3 +106,5 @@ Show methodology with the corresponding ranking rather than a shared mixed foote
 2026-09-30: Use 模型评测榜 consistently as the Chinese benchmark ranking name in navigation, homepage cards, page headings and related visible copy. This supersedes the previous Chinese ranking name.
 
 2026-09-30: Model comparison must be a prominent dedicated feature above ranking filters, with a clear heading, model picker and selected-model cards. Support up to five models and mobile wrapping. Selection is a draft: update the table only after the user clicks the prominent 比较 / Compare button; subsequent selection edits must not change active results until applied.
+
+2026-09-30: Remove the benchmark evidence directory heading, eyebrow and description; retain its profile cards with compact spacing above them.
