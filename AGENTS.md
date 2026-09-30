@@ -102,3 +102,7 @@ Show methodology with the corresponding ranking rather than a shared mixed foote
 2026-09-18: Keep the original table-header background colors on Pricing, Open Source and Agent Skills rankings.
 
 2026-09-18: Usage share images mirror the live page: use the latest AI Trend Rankings plus Tencent Technology and Penguin Intelligence masthead, show the same page title and introduction without removed total or growth summary metrics, and reuse the live usage data-source, methodology and disclaimer copy.
+
+2026-09-30: Use 模型评测榜 consistently as the Chinese benchmark ranking name in navigation, homepage cards, page headings and related visible copy. This supersedes the previous Chinese ranking name.
+
+2026-09-30: Model comparison must be a prominent dedicated feature above ranking filters, with a clear heading, model picker and selected-model cards. Support up to five models and mobile wrapping. Selection is a draft: update the table only after the user clicks the prominent 比较 / Compare button; subsequent selection edits must not change active results until applied.
