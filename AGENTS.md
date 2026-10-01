@@ -112,3 +112,5 @@ Show methodology with the corresponding ranking rather than a shared mixed foote
 2026-10-01: Keep the comparison panel compact and aligned: title and short guidance above a single search-and-Compare row, selected models directly below. Remove the duplicate add-model card, eyebrow and bottom instructions. Continue to apply selection only on Compare.
 
 2026-10-02: Benchmark source attribution is non-clickable text: 各Benchmark官方公开数据集. Use the supplied detailed sources, methodology and disclaimer, preserving the two-evaluation / 18-month eligibility rule and explicit comparability and historical-filter limitations.
+
+2026-10-02: Use the user-supplied 24 Chinese benchmark profiles consistently in directory cards, header tags and hover/long-press profiles. Profiles contain tags, introduction, evaluation method and update cadence; retain expand/collapse. Chinese copy is stored centrally in src/benchmark-profiles-zh.json.
