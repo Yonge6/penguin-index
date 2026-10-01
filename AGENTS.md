@@ -108,3 +108,7 @@ Show methodology with the corresponding ranking rather than a shared mixed foote
 2026-09-30: Model comparison must be a prominent dedicated feature above ranking filters, with a clear heading, model picker and selected-model cards. Support up to five models and mobile wrapping. Selection is a draft: update the table only after the user clicks the prominent 比较 / Compare button; subsequent selection edits must not change active results until applied.
 
 2026-09-30: Remove the benchmark evidence directory heading, eyebrow and description; retain its profile cards with compact spacing above them.
+
+2026-10-01: Keep the comparison panel compact and aligned: title and short guidance above a single search-and-Compare row, selected models directly below. Remove the duplicate add-model card, eyebrow and bottom instructions. Continue to apply selection only on Compare.
+
+2026-10-02: Benchmark source attribution is non-clickable text: 各Benchmark官方公开数据集. Use the supplied detailed sources, methodology and disclaimer, preserving the two-evaluation / 18-month eligibility rule and explicit comparability and historical-filter limitations.
