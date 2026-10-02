@@ -13,7 +13,7 @@ export function createChart(element,data){return createUsageChart(element,data,{
 export function createUsageChart(element,data,options={}){
  const {mode='total',theme='light',selected=[],singleWeek=false,lang='en',title='',onHover,onModelClick,exportMode=false}=options;
  const chart=echarts.init(element),c=colors(theme==='dark'),zh=lang==='zh',{top,others}=stackRows(data);
- const arrowIcon='data:image/svg+xml,'+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="${c.text}" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"><path d="M64 192 192 64"/><path d="M88 64h104v104"/></svg>`);
+ const arrowIcon='data:image/svg+xml,'+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="${c.text}"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg>`);
  const picked=mode==='compare'?selected:top;
  const total=data.platformTotal??data.weeks.reduce((s,w)=>s+w[2],0);
  const header=title?70:20;
@@ -23,7 +23,7 @@ export function createUsageChart(element,data,options={}){
  ];
  const names=new Map(picked.map(r=>[r.id,r.name+(r.id.includes(':free')?' · Free':'')]));names.set('__others',zh?'其他模型':'Others');
  const horizontal=singleWeek&&mode==='total';
- const rich={rank:{color:c.muted,width:24,fontSize:11},name:{color:c.text,fontSize:12,align:'left'},arrow:{width:14,height:14,padding:[0,0,0,6],backgroundColor:{image:arrowIcon}},spacer:{width:9},brandPlaceholder:{width:22,height:22}};
+ const rich={rank:{color:c.muted,width:24,fontSize:11},name:{color:c.text,fontSize:12,align:'left'},arrow:{width:16,height:16,padding:[0,0,0,6],backgroundColor:{image:arrowIcon}},spacer:{width:9},brandPlaceholder:{width:22,height:22}};
  top.forEach((r,i)=>{const brand=modelBrand(r);if(brand)rich['brand'+i]={height:22,width:22,backgroundColor:{image:import.meta.env.BASE_URL+'assets/models/'+brand.file}};});
  chart.setOption({animation:false,backgroundColor:c.bg,color:chartColors,textStyle:{fontFamily:'Inter, sans-serif'},title:title?{text:title,left:16,top:12,textStyle:{color:c.text,fontSize:20,fontWeight:600},subtext:(data.from||data.weeks[0]?.[0])+' — '+(data.to||data.weeks.at(-1)?.[0]),subtextStyle:{color:c.muted,fontSize:12}}:undefined,
  grid:{left:horizontal?260:12,right:horizontal?106:22,top:header,bottom:horizontal?42:exportMode?115:100,containLabel:!horizontal},
