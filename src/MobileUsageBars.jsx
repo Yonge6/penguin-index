@@ -1,3 +1,4 @@
+import {ArrowUpRightIcon} from '@phosphor-icons/react';
 import ModelLogo from './ModelLogo';
 import {stackRows} from './usage-data';
 import {chartColors} from './usage-palette';
@@ -10,7 +11,7 @@ export default function MobileUsageBars({data,lang,title,onModelClick}){
  return <section className="mobile-usage-bars" aria-label={title}>
   <h3>{title}</h3><p className="mobile-bars-period">{data.from} — {data.to}</p>
   <ol>{rows.map((r,i)=><li key={r.id}>
-   <div className="mobile-bar-name"><span className="mobile-bar-rank">{String(i+1).padStart(2,'0')}</span>{r.id!=='__others'&&<ModelLogo item={r} lang={lang}/>}<strong>{r.id!=='__others'?<button className="usage-profile-trigger" aria-haspopup="dialog" onClick={()=>onModelClick?.(r)}><span>{r.name}{r.id.includes(':free')?' · Free':''}</span><span className="usage-profile-arrow" aria-hidden="true">↗</span></button>:r.name}</strong></div>
+   <div className="mobile-bar-name"><span className="mobile-bar-rank">{String(i+1).padStart(2,'0')}</span>{r.id!=='__others'&&<ModelLogo item={r} lang={lang}/>}<strong>{r.id!=='__others'?<button className="usage-profile-trigger" aria-haspopup="dialog" onClick={()=>onModelClick?.(r)}><span>{r.name}{r.id.includes(':free')?' · Free':''}</span><ArrowUpRightIcon className="usage-profile-arrow" size={16} aria-hidden="true"/></button>:r.name}</strong></div>
    <div className="mobile-bar-value"><b>{short(r.total)}</b><span>{data.platformTotal?(r.total/data.platformTotal*100).toFixed(1):'0'}%</span></div>
    <div className="mobile-bar-track" aria-hidden="true" onClick={()=>{if(r.id!=='__others')onModelClick?.(r)}}><div style={{width:(r.total/max*100)+'%',background:r.id==='__others'?'#b8c9df':chartColors[i%chartColors.length]}}/></div>
   </li>)}</ol>
