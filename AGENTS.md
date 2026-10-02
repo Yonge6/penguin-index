@@ -118,3 +118,5 @@ Show methodology with the corresponding ranking rather than a shared mixed foote
 2026-10-02: Usage ranking model names and Top 5 names open a scrollable model usage profile, with identity, complete-week metrics, usage/share/rank trend, milestones and a concise summary. Derive metrics from recorded OpenRouter observations; exclude incomplete weeks from totals and growth, preserve missing observations, and never infer release dates from model IDs. Support Escape/close, focus restoration and mobile internal scrolling.
 
 2026-10-02: Benchmark directory cards should size to content with no fixed minimum summary height. Place Open profile directly after the introduction with a small gap; avoid large empty areas on desktop and mobile.
+
+2026-10-02: Add an explicit Details button immediately left of Sort for every benchmark header in both normal and comparison tables. Details opens the profile without changing sort. Remove the hidden touch long-press interaction; keep desktop hover and a scrollable profile on both screen sizes.
