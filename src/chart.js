@@ -11,7 +11,7 @@ const compact=n=>new Intl.NumberFormat('en',{notation:'compact',maximumFractionD
 const colors=dark=>({bg:dark?'#16202d':'#ffffff',text:dark?'#f1f6fc':'#162333',muted:dark?'#a5b6cb':'#7c8fa7',line:dark?'#344253':'#e9edf6',other:dark?'#56687e':'#d4deec'});
 export function createChart(element,data){return createUsageChart(element,data,{mode:'total',lang:document.documentElement.lang.startsWith('zh')?'zh':'en'});}
 export function createUsageChart(element,data,options={}){
- const {mode='total',theme='light',selected=[],singleWeek=false,lang='en',title='',onHover,exportMode=false}=options;
+ const {mode='total',theme='light',selected=[],singleWeek=false,lang='en',title='',onHover,onModelClick,exportMode=false}=options;
  const chart=echarts.init(element),c=colors(theme==='dark'),zh=lang==='zh',{top,others}=stackRows(data);
  const picked=mode==='compare'?selected:top;
  const total=data.platformTotal??data.weeks.reduce((s,w)=>s+w[2],0);
@@ -28,11 +28,17 @@ export function createUsageChart(element,data,options={}){
  grid:{left:horizontal?12:12,right:horizontal?106:22,top:header,bottom:horizontal?42:exportMode?115:100,containLabel:true},
  tooltip:{trigger:'axis',axisPointer:{type:mode==='total'?'shadow':'line'},renderMode:'richText',confine:true,backgroundColor:c.bg,borderColor:c.line,textStyle:{color:c.text,fontSize:11},formatter:params=>{const items=Array.isArray(params)?params:[params];if(horizontal)return items.map(p=>`${p.name}: ${compact(p.value)}`).join('\n');const index=items[0]?.dataIndex;const week=data.weeks[index];return [week?.[0]+(week?.[1]==='i'?(zh?' · 本周未结束':' · Incomplete week'):''),mode==='total'?(zh?'平台总量 ':'Platform total ')+compact(week?.[2]??0):'',...items.filter(p=>p.value!=null&&p.value!==0).sort((a,b)=>b.value-a.value).map(p=>(names.get(p.seriesName)||p.seriesName)+': '+compact(p.value)+(mode==='total'&&week?.[2]?'  '+(p.value/week[2]*100).toFixed(1)+'%':''))].filter(Boolean).join('\n')}},
  xAxis:horizontal?{type:'value',axisLabel:{color:c.muted,fontSize:10,formatter:compact},splitLine:{lineStyle:{color:c.line}},axisLine:{show:false}}:{type:'category',data:data.weeks.map(w=>w[0]),axisTick:{show:false},axisLine:{lineStyle:{color:c.line}},axisLabel:{color:c.muted,fontSize:10,hideOverlap:true,formatter:v=>v.slice(5)}},
- yAxis:horizontal?{type:'category',inverse:true,data:[...top.map(r=>r.name+(r.id.includes(':free')?' · Free':'')),zh?'其他模型':'Others'],axisTick:{show:false},axisLine:{show:false},axisLabel:{color:c.text,fontSize:12,rich,formatter:(value,index)=>'{rank|'+String(index+1).padStart(2,'0')+'}'+(rich['brand'+index]?'{brand'+index+'|}':'{brandPlaceholder| }')+'{spacer| }{name|'+(value.length>27?value.slice(0,25)+'…':value)+'}'}}:{type:'value',axisLabel:{color:c.muted,fontSize:10,formatter:compact},splitLine:{lineStyle:{color:c.line,type:'dashed'}}},
+ yAxis:horizontal?{type:'category',inverse:true,triggerEvent:!!onModelClick,data:[...top.map(r=>r.name+(r.id.includes(':free')?' · Free':'')),zh?'其他模型':'Others'],axisTick:{show:false},axisLine:{show:false},axisLabel:{color:c.text,fontSize:12,rich,formatter:(value,index)=>'{rank|'+String(index+1).padStart(2,'0')+'}'+(rich['brand'+index]?'{brand'+index+'|}':'{brandPlaceholder| }')+'{spacer| }{name|'+(value.length>27?value.slice(0,25)+'…':value)+'}'}}:{type:'value',axisLabel:{color:c.muted,fontSize:10,formatter:compact},splitLine:{lineStyle:{color:c.line,type:'dashed'}}},
  legend:horizontal?{show:false}:{type:exportMode?'plain':'scroll',bottom:exportMode?10:23,itemWidth:12,itemHeight:7,textStyle:{fontSize:exportMode?13:10,color:c.text},pageTextStyle:{color:c.muted},formatter:name=>names.get(name)||name},
  dataZoom:horizontal||exportMode?[]:[{type:'slider',bottom:55,height:15,borderColor:c.line,backgroundColor:c.bg,fillerColor:theme==='dark'?'rgba(74,145,240,.18)':'rgba(30,118,240,.12)',handleStyle:{color:'#61a8ff'},textStyle:{color:c.muted,fontSize:9}}],
  graphic:[],series});
  if(onHover&&!horizontal){chart.on('mouseover',event=>{if(event.componentType==='series')onHover(event.dataIndex)});chart.on('globalout',()=>onHover(null))}
+ if(onModelClick&&!exportMode)chart.on('click',event=>{
+  let model;
+  if(horizontal&&event.componentType==='yAxis')model=top.find(r=>r.name+(r.id.includes(':free')?' · Free':'')===event.value);
+  else if(event.componentType==='series')model=horizontal?top[event.dataIndex]:picked.find(r=>r.id===event.seriesId);
+  if(model)onModelClick(model);
+ });
  return chart;
 }
 export function createPriceChart(element,history,currency,t){
