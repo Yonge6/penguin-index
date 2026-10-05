@@ -8,6 +8,15 @@ Functional changes are retained locally: extended pricing details/history, weekl
 
 final result: passed
 
+## 2026-10-05 — Dossier typography, Skillhub filter and benchmark freshness
+
+- Unified the Usage and Pricing dossier typography, spacing, metric cards, labels and supporting copy under one responsive component scale. At 637 × 1173, both tabs remain readable and scroll inside the dialog; the Usage identity badges sit on their own row and the Pricing metrics use a 2 + 1 layout.
+- Reduced the Skillhub category selector to the same 13px control scale used across ranking filters. Verified the complete mobile toolbar and first result rows at 637px.
+- Refreshed the benchmark snapshot through 2026-09-29, merged the verified GPT-6.1 Sol High Artificial Analysis result, and changed the unsorted model list to newest release first. The mobile table now opens with GPT-6.1 Sol High, its #17 source link, then GPT-6 Astra.
+- Benchmark data tests passed 3/3, Sites worker tests passed 4/4, the production build passed, and `git diff --check` passed.
+
+final result: passed
+
 ## Source and evidence
 
 - Visual truth: `../design-options/international-v2/signal-review.png`, 1488 × 1058 pixels.
