@@ -299,7 +299,6 @@ dialog{line-height:1.6}.modal-description{font-size:15px;line-height:1.75}.modal
 
 /* Match the Skillhub category control to the other compact ranking filters. */
 .skillhub-toolbar select{padding-inline:12px;font-size:13px}
-.skillhub-table .skillhub-name:hover{color:#172536}
 .skillhub-table th:nth-child(2){width:58px}.skillhub-table th:nth-child(3){width:42%}.skillhub-table td:nth-child(2){padding-block:19px}.skillhub-table td:nth-child(3){padding-block:19px}.skillhub-table td:nth-child(3)>p{display:-webkit-box;max-width:660px;margin:7px 0 5px;overflow:hidden;color:#667b94;font-size:12px;line-height:1.6;-webkit-box-orient:vertical;-webkit-line-clamp:2}.skillhub-logo-cell{text-align:center}.skillhub-logo{display:inline-flex;width:38px;height:38px;object-fit:cover;border:1px solid #dce6f1;border-radius:9px;background:#fff;vertical-align:middle}.skillhub-logo-fallback{align-items:center;justify-content:center;background:#e9f2ff;color:#176be8;font-size:16px;font-weight:700}
 @media(max-width:800px){.skillhub-table{min-width:820px}.skillhub-table th:nth-child(2){width:54px}.skillhub-table th:nth-child(3){width:390px}.skillhub-table td:nth-child(3)>p{-webkit-line-clamp:2}}
 
