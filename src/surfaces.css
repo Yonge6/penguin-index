@@ -299,6 +299,7 @@ dialog{line-height:1.6}.modal-description{font-size:15px;line-height:1.75}.modal
 
 /* Match the Skillhub category control to the other compact ranking filters. */
 .skillhub-toolbar select{padding-inline:12px;font-size:13px}
+.skillhub-table .skillhub-name:hover{color:#172536}
 
 .usage-bottom-scroll{display:none}
 @media(max-width:760px){.usage-table>.table-scroll{position:relative;margin-bottom:0;box-shadow:inset -18px 0 18px -20px #29486d99}.usage-bottom-scroll{display:block;margin:8px 2px 22px}}

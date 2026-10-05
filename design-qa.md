@@ -159,7 +159,7 @@ References: user browser annotations, supplied dialog and arrow screenshots, the
 - Benchmark comparison remains an explicit submit flow: choices are staged and only applied after Compare. Header Details opens the benchmark dossier. Repeated Sort clicks switch between ascending and descending rank while keeping missing results at the bottom. The old benchmark card directory remains hidden.
 - Usage chart, Top 5 and ranking-table model names all open one shared model dossier and use the same compact northeast arrow. The shared dossier defaults to Usage from the usage ranking and Pricing from the pricing ranking, keeps both tabs visible and gives unmatched records a clear empty state.
 - At a 390 × 844 viewport, the dossier is scrollable, supporting text remains readable, metric cards retain a two-column layout, and the usage ranking table exposes a visible horizontal range control beneath the table.
-- Skillhub榜 follows the existing page system, showing 100 trending skills and the top 1,000 by downloads with search, category filters, pagination and source links.
+- Skillhub榜 follows the existing page system, showing 100 trending skills and the top 1,000 by downloads with search, category filters and pagination. Skill names are intentionally plain text with no per-Skill navigation.
 - Browser checks covered both benchmark sort directions, benchmark Details, both dossier tabs, an unmatched dossier state, the mobile dossier, mobile table slider, and both Skillhub datasets. Benchmark/model-profile tests passed 6/6, Sites worker tests passed 4/4, the production build passed, and `git diff --check` passed.
 
 final result: passed
