@@ -122,3 +122,11 @@ Show methodology with the corresponding ranking rather than a shared mixed foote
 2026-10-02: Add an explicit Details button immediately left of Sort for every benchmark header in both normal and comparison tables. Details opens the profile without changing sort. Remove the hidden touch long-press interaction; keep desktop hover and a scrollable profile on both screen sizes.
 
 2026-10-02: Hide the entire bottom benchmark card directory. Preserve its profile content through table Details buttons and desktop hover.
+## 2026-10-05 confirmed interaction rules
+
+- Usage and pricing model details use one shared dossier dialog. Its top navigation always exposes both `调用档案` and `价格档案`; the originating ranking selects its matching tab first.
+- Cross-ranking profile matching must use a verified model identity match. When the other dataset has no matching record, keep the tab visible and show an explicit empty state instead of guessing.
+- Supporting dialog copy must remain comfortably readable on mobile; avoid helper text below 12px.
+- Mobile horizontally scrollable ranking tables use the same visible bottom range slider pattern as the benchmark table.
+- A benchmark column sort button alternates ascending and descending rank order on repeated clicks, while missing results remain at the bottom.
+- Add `Skillhub榜` as the seventh primary navigation item, immediately after Agent Skills. It uses SkillHub public data and only exposes the public 100-item trending list plus the top 1,000 by downloads, styled within the existing site system.

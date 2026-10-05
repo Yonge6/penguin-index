@@ -142,3 +142,15 @@ Methodology is attached to each relevant ranking: expanded on standalone pages, 
 
 ## 2026-09-17 — Model logos and Skills card
 Kimi white foreground corrected for light backgrounds; 19 provider mappings added from MIT LobeHub static icons. All mapped assets exist and SVGs parse; unknown brands retain fallback. Home Skills now has independent filters and correct weekly Skills navigation; product daily card stays unchanged during Skills filtering. Home disclosures removed, standalone disclosures retained. Build and 13 tests pass.
+
+## 2026-10-05 — Benchmark controls, shared model dossiers and Skillhub
+
+References: user browser annotations, supplied dialog and arrow screenshots, the existing Penguin Index visual system, and the public SkillHub rankings.
+
+- Benchmark comparison remains an explicit submit flow: choices are staged and only applied after Compare. Header Details opens the benchmark dossier. Repeated Sort clicks switch between ascending and descending rank while keeping missing results at the bottom. The old benchmark card directory remains hidden.
+- Usage chart, Top 5 and ranking-table model names all open one shared model dossier and use the same compact northeast arrow. The shared dossier defaults to Usage from the usage ranking and Pricing from the pricing ranking, keeps both tabs visible and gives unmatched records a clear empty state.
+- At a 390 × 844 viewport, the dossier is scrollable, supporting text remains readable, metric cards retain a two-column layout, and the usage ranking table exposes a visible horizontal range control beneath the table.
+- Skillhub榜 follows the existing page system, showing 100 trending skills and the top 1,000 by downloads with search, category filters, pagination and source links.
+- Browser checks covered both benchmark sort directions, benchmark Details, both dossier tabs, an unmatched dossier state, the mobile dossier, mobile table slider, and both Skillhub datasets. Benchmark/model-profile tests passed 6/6, Sites worker tests passed 4/4, the production build passed, and `git diff --check` passed.
+
+final result: passed
