@@ -14,6 +14,7 @@ const compact=skill=>({
  stars:Number(skill.stars)||0,
  source:skill.source||'SkillHub',
  verified:Boolean(skill.verified),
+ icon_url:skill.iconUrl||null,
  updated_at:skill.updated_at||null,
  url:`https://skillhub.cn/skills/${skill.namespace?.handle||skill.ownerName||'skillhub'}/${skill.slug}`,
 });
