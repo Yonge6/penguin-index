@@ -1,42 +1,92 @@
-# Penguin Index · 企鹅智库｜榜单
+# AI 趋势榜（Penguin Index）
 
-A bilingual AI ranking website, built from the selected Signal Review design direction. React + Vite; self-hosted Inter and IBM Plex Mono; Phosphor icons; lazily loaded ECharts.
+AI 趋势榜是一个中英双语的 AI 数据榜单网站，统一展示模型评测、模型调用量、模型价格、开源产品、Agent Skills 与 SkillHub 热门技能。项目使用 React 19 + Vite 6 构建，可部署到 GitHub Pages，也保留了静态站点托管所需的构建产物适配。
 
-## Preview
+线上地址：<https://yonge6.github.io/penguin-index/>
+
+## 功能范围
+
+- 模型评测榜：24 项公开 Benchmark、模型对比、筛选、排序及评测档案。
+- 模型调用榜：OpenRouter 公开快照、周期切换、模型对比、CSV 与图片导出、模型调用档案。
+- 模型价格榜：全球与中国模型价格、筛选、排序、币种切换、CSV 导出、模型价格档案。
+- 开源产品榜与 Agent Skills 榜：基于公开 GitHub 快照的日榜、周榜和月榜。
+- SkillHub 榜：近期飙升 100 项与下载量 Top 1000，支持搜索、分类和分页。
+- 中英文切换、桌面端与移动端响应式布局、移动端横向表格浏览。
+
+## 技术栈
+
+- Node.js 22
+- React 19
+- Vite 6
+- ECharts 6
+- Phosphor Icons
+- 自托管 Inter 与 IBM Plex Mono 字体
+
+## 本地运行
 
 ```sh
-npm ci
+npm ci --no-audit --no-fund
 npm run dev -- --port 4173
 ```
 
-`npm run build` emits the GitHub Pages client in `dist/client`. Relative asset paths work under the repository subdirectory. Query-based routes support direct links and refresh without a server rewrite.
-
-## Features
-
-- English and simplified Chinese, browser-language first visit and saved explicit preference.
-- Home, upcoming benchmarks, model usage, API pricing, open-source rankings.
-- Products / Skills / DSH, daily / weekly / monthly, search, language filters, saved projects and detail dialogs.
-- Complete-week usage ranges, interactive chart, searchable model rankings and CSV export.
-- Pricing provider and open-weight filters, currency selector, sorting, model details and CSV export.
-- Source timestamps and methodology at the bottom. Mobile tables scroll within their container.
-
-## Data boundary
-
-This is a design preview backed by published source snapshots, **not a live ingestion service**. Model usage snapshot: 2026-09-07; pricing snapshot: 2026-08-18; GitHub snapshot: 2026-09-05T23:00:01.574Z. All actual dates are read from bundled data in the UI. The benchmark is not yet available. DSH monthly baselines are still accumulating.
-
-Sources:
-- https://kejunzheng.github.io/penguin-ranking-preview/
-- https://mat1.gtimg.com/qqcdn/openrouterllm/model-trends/data/frontend-data.json
-
-Star growth ordering is retained: positive growth only, descending growth, descending total stars, ascending repository ID, top ten. Source preview project links remain disabled during review. Descriptions have English translations; numeric source fields are unchanged. `scripts/localize-snapshots.mjs` applies translations if source snapshots are replaced.
-
-Tencent Technology publisher logo was supplied by the project owner. The independent Penguin Index mark and Usage background were generated for the selected design. Branding is a redesign proposal; this repository does not claim to be the official production service.
-
-## Verification
+生产构建：
 
 ```sh
-node --test tests/data.test.mjs
 npm run build
 ```
 
-See `design-qa.md` for browser and visual verification. GitHub Actions publishes `dist/client` to GitHub Pages on the default `codex/international-ui` branch.
+GitHub Pages 使用 `dist/client`。查询参数路由可在仓库子目录下直接访问和刷新。
+
+## 验收
+
+```sh
+node --test tests/*.test.mjs
+npm run build
+```
+
+通过标准：全部测试通过，且构建生成以下文件：
+
+- `dist/client/index.html`
+- `dist/server/index.js`
+- `dist/.openai/hosting.json`
+
+## 数据更新
+
+仓库提交的是可复现的数据快照，并非实时采集服务。各页面会显示自身数据文件的更新时间。
+
+```sh
+npm run update:benchmarks
+npm run update:skillhub
+```
+
+更新脚本依赖相应上游公开数据。更新后必须重新运行完整测试和生产构建，再提交更新后的 `public/data` 文件。
+
+主要数据文件：
+
+- `public/data/benchmarks.json`：模型评测数据，当前生成于 2026-10-05。
+- `public/data/models.json`：模型调用与原始价格快照，当前生成于 2026-09-07。
+- `public/data/global-prices.json`：OpenRouter 全球价格快照，当前更新于 2026-09-09。
+- `public/data/product/*`、`public/data/skill/*`：GitHub 开源产品和 Agent Skills 快照。
+- `public/data/skillhub.json`：SkillHub 榜单，当前生成于 2026-10-05。
+
+数据来源、统计口径和免责声明均在对应榜单底部展示。任何日期应以数据文件和页面实际显示为准。
+
+## 部署
+
+`.github/workflows/pages.yml` 会在 `codex/international-ui` 分支更新后执行：
+
+1. 安装锁定依赖；
+2. 运行数据测试；
+3. 执行生产构建；
+4. 将 `dist/client` 发布到 GitHub Pages。
+
+如迁入甲方 GitHub 组织，需在仓库 Settings → Pages 中启用 GitHub Actions，并确认工作流监听的分支名称与甲方默认分支一致。
+
+## 资源与第三方许可
+
+- 模型品牌图标来源与许可：`public/assets/models/SOURCES.md`、`public/assets/models/LICENSE-lobe-icons`。
+- 其他图片来源说明：`public/assets/ASSET-SOURCES.md`。
+- npm 依赖及版本以 `package-lock.json` 为准。
+- 仓库根目录目前未声明统一的开源许可证。项目源代码的著作权、交付范围和后续使用权应以双方合同或交付确认单为准；第三方依赖与素材继续适用各自许可证。
+
+完整交付方式、验收清单和接管步骤见 [DELIVERY.md](./DELIVERY.md)。

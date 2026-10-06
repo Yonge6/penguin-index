@@ -1,0 +1,8 @@
+# Keep release archives focused on source, data, tests, and deployment files.
+AGENTS.md export-ignore
+DESIGN-RESTART.md export-ignore
+design-qa.md export-ignore
+functional-audit.md export-ignore
+design-options/ export-ignore
+docs/ export-ignore
+qa/ export-ignore
