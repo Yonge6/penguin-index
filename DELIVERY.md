@@ -34,8 +34,8 @@ GitHub 仓库便于验收、追踪修改、配置权限和后续维护；ZIP 用
 
 ```sh
 npm ci --no-audit --no-fund
-node --test tests/*.test.mjs
 npm run build
+node --test tests/*.test.mjs
 npm run dev -- --port 4173
 ```
 

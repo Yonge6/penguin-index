@@ -40,8 +40,8 @@ GitHub Pages 使用 `dist/client`。查询参数路由可在仓库子目录下�
 ## 验收
 
 ```sh
-node --test tests/*.test.mjs
 npm run build
+node --test tests/*.test.mjs
 ```
 
 通过标准：全部测试通过，且构建生成以下文件：
